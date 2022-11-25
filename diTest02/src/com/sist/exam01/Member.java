@@ -3,7 +3,7 @@ package com.sist.exam01;
 public class Member {
 	
 	public Member() {
-		
+		System.out.println("생성자입니다.");
 	}
 	
 	public Member(String name) {

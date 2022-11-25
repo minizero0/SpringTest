@@ -1,8 +1,11 @@
 package com.sist.exam02;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class ArticleDAO {
 	
 	public void insert() {
-		System.out.println("등록하였습니다");
+		System.out.println("DAO");
 	}
 }

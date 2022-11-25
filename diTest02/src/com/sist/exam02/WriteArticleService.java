@@ -8,5 +8,9 @@ public class WriteArticleService {
 		this.articleDAO = articleDAO;
 	}
 	
+	public void insert() {
+		articleDAO.insert();
+	}
+	
 	      
 }
