@@ -14,6 +14,5 @@ public class HelloApp {
 		MessageBean bean = (MessageBean)factory.getBean("mb");
 		
 		bean.sayHello("Spring");
-		
 	}
 }

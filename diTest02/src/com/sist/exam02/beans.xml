@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id = "articleDAO" class="com.sist.exam02.ArticleDAO"/>
+	<bean id = "" class = "com.sist.exam02.WriteArticleService">
+		<constructor-arg>
+			<ref bean="articleDAO"/>
+		</constructor-arg>
+	</bean>
+</beans>
