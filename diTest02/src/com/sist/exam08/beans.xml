@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id = "zipFilter" class = "com.sist.exam08.ZipFilter"/>
+	<bean id = "encryptionFilter" class = "com.sist.exam08.EncryptionFilter"/>
+	<bean id = "headerFilter" class = "com.sist.exam08.HeaderFilter"/>
+	
+	
+	<bean id = "handler" class = "com.sist.exam08.ProtocolHandler">
+		<property name="filters">
+			<list>
+				<ref bean = "encryptionFilter"/>
+				<ref bean = "zipFilter"/>
+				<bean class = "com.sist.exam08.HeaderFilter"/>
+			</list>
+		</property>
+	</bean>
+</beans>
