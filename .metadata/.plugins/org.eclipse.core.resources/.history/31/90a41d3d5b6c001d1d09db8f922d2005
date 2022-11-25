@@ -1,0 +1,7 @@
+package com.sist.ex01;
+
+public class HelloApp {
+	MessageBean bean = new MessageBean();
+	bean.sayHello();
+	
+}
