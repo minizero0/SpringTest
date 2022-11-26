@@ -8,7 +8,5 @@ public class MainTest {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/sist/exam08/beans.xml");
 		SystemMonitor sm = (SystemMonitor)context.getBean("sm");
 		sm.monitor();
-				
-		
 	}
 }

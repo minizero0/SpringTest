@@ -19,6 +19,4 @@ public class SmsSender {
 		System.out.println(from+"으로 부터 " + to + "에게 메세지를 전송하였습니다.");
 	}
 	
-	
-	
 }

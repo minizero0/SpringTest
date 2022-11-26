@@ -4,4 +4,27 @@
     <fullyQualifiedTypeName name="com.sist.ex01.HelloApp"/>
     <fullyQualifiedTypeName name="com.sist.ex02.MessageBean"/>
     <fullyQualifiedTypeName name="com.sist.ex02.MessageBeanEn"/>
+    <fullyQualifiedTypeName name="org.springframework.core.io.FileSystemResource"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.xml.XmlBeanFactory"/>
+    <fullyQualifiedTypeName name="com.sist.ex03.MessageBean"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.BeanFactory"/>
+    <fullyQualifiedTypeName name="org.springframework.core.io.Resource"/>
+    <fullyQualifiedTypeName name="com.sist.exam01.Member"/>
+    <fullyQualifiedTypeName name="com.sist.exam02.ArticleDAO"/>
+    <fullyQualifiedTypeName name="com.sist.exam02.WriteArticleService"/>
+    <fullyQualifiedTypeName name="com.sist.exam02.SystemMonitor"/>
+    <fullyQualifiedTypeName name="com.sist.exam04.SmsSender"/>
+    <fullyQualifiedTypeName name="org.springframework.web.portlet.context.ConfigurablePortletApplicationContext"/>
+    <fullyQualifiedTypeName name="java.sql.SQLSyntaxErrorException"/>
+    <fullyQualifiedTypeName name="com.sist.exam04.SystemMonitor"/>
+    <fullyQualifiedTypeName name="com.sist.exam05.Member"/>
+    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="com.sist.exam05.MemberDAO"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.sist.exam08.Filter"/>
+    <fullyQualifiedTypeName name="com.sist.exam08.ProtocolHandler"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="exam10.WriteArticleService"/>
+    <fullyQualifiedTypeName name="com.sist.exam10.WriteArticleService"/>
 </qualifiedTypeNameHistroy>
