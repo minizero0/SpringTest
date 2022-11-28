@@ -4,8 +4,8 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<bean id="sender" class = "com.sist.exam08.SmsSender" p:from="조영민" p:to="윤아"/>
-	<bean id = "sm" class = "com.sist.exam08.SystemMonitor" p:periodTime="10" p:sender-ref="sender" />
+	<bean id="sender" class = "com.sist.exam09.SmsSender" p:from="조영민" p:to="HOME"/>
+	<bean id = "sm" class = "com.sist.exam09.SystemMonitor" p:periodTime="10" p:sender-ref="sender"/>
 	
 	
 </beans>
