@@ -9,9 +9,8 @@
 </head>
 <body>
 	<h2>부서목록</h2>
-	${list}
-	<c:forEach var = "list1" items = "${list}">
-		$(list1.dname);
+	<c:forEach var = "d" items="${list }">
+		${d.dname }<br>
 	</c:forEach>
 </body>
 </html>
