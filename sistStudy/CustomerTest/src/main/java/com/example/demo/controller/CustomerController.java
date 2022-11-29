@@ -22,4 +22,10 @@ public class CustomerController {
 		mav.addObject("list", dao.findAll());
 		return mav;
 	}
+	@RequestMapping("/detailCustomer")
+	public ModelAndView detail(int custid) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("detailCustomer", dao.findById(custid));
+		return mav;
+	}
 }

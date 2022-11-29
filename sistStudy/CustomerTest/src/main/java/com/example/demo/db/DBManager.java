@@ -29,4 +29,12 @@ public class DBManager {
 		session.close();
 		return list;
 	}
+	
+	public static List<CustomerVO> findById(int custid){
+		SqlSession session = sqlSessionFactory.openSession();
+		List<CustomerVO> list = session.selectList("customer.findById",custid);
+		System.out.println(list);
+		session.close();
+		return list;
+	}
 }
