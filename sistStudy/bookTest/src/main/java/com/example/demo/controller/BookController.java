@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,5 +24,10 @@ public class BookController {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("list", dao.findAll());
 		return mav;
+	}
+	
+	@RequestMapping("/asd.do")
+	public String list2(){
+		return "할루";
 	}
 }
