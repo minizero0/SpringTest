@@ -9,7 +9,7 @@
 </head>
 <body>
 	<c:forEach var = "b" items="${list }">
-		${b.custid }
+	<li><a href="custid=${b.custid }">${b.custid }</a></li>
 		${b.name }
 		${b.address }
 		${b.phone }<br>
