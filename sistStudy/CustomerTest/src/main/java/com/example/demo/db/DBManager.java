@@ -46,6 +46,15 @@ public class DBManager {
 		session.close();
 		return re;
 	}
+
+	public static int updateCustomer(CustomerVO c) {
+		// TODO Auto-generated method stub
+		SqlSession session = sqlSessionFactory.openSession();
+		int re = session.update("customer.update",c);
+		session.commit();
+		session.close();
+		return 0;
+	}
 	
 	
 }

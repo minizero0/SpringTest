@@ -20,7 +20,12 @@ public class CustomerDAO {
 
 	public int insert(CustomerVO c) {
 		// TODO Auto-generated method stub
-		return DBManager.insertCustomer(c);;
+		return DBManager.insertCustomer(c);
+	}
+
+	public int update(CustomerVO c) {
+		// TODO Auto-generated method stub
+		return DBManager.updateCustomer(c);
 	} 
 	
 

@@ -46,9 +46,20 @@ public class CustomerController {
 		int re = dao.insert(c);
 		System.out.println(re);
 		return mav;
-		
 	}
 	
+	@GetMapping("/updateCustomer")
+	public int updateGet(int custid) {
+		return custid;
+		
+	}
+	@PostMapping("updateCustomer")
+	public ModelAndView updateSubmit(CustomerVO c) {
+		ModelAndView mav = new ModelAndView();
+		int re = dao.update(c);
+		System.out.println(re);
+		return mav;
+	}
 	
 	
 	

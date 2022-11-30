@@ -12,4 +12,8 @@
   <select id="insert" parameterType="CustomerVO">
     insert into customer(custid,name,address,phone) values(#{custid}, #{name}, #{address}, #{phone})
   </select>
+  
+  <select id="update" parameterType="CustomerVO">
+  	update customer set name = #{name}, address = #{address}, phone = #{phone} where custid = #{custid}
+  </select>
 </mapper>
