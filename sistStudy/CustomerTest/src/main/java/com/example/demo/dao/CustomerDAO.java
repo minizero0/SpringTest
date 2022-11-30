@@ -16,6 +16,11 @@ public class CustomerDAO {
 	
 	public CustomerVO findById(int custid){
 		return DBManager.findById(custid);
+	}
+
+	public int insert(CustomerVO c) {
+		// TODO Auto-generated method stub
+		return DBManager.insertCustomer(c);;
 	} 
 	
 

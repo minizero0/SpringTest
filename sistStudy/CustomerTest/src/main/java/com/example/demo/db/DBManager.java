@@ -38,8 +38,14 @@ public class DBManager {
 		session.close();
 		return cv;
 	}
-	
-	public static void insertCustomer(CustomerVO c) {
+
+	public static int insertCustomer(CustomerVO c) {
 		SqlSession session = sqlSessionFactory.openSession();
+		int re = session.insert("customer.insert",c);
+		session.commit();
+		session.close();
+		return re;
 	}
+	
+	
 }
