@@ -14,6 +14,7 @@
 		주소 : ${b.address }<br>
 		번호 : ${b.phone }<br>
 	<hr>
-	<a href = "updateCustomer?custid=${c.custid }">수정</a>
+	<a href = "updateCustomer?custid=${b.custid }">수정</a>
+	<a href = "deleteCustomer?custid=${b.custid }">삭제</a>
 </body>
 </html>

@@ -49,8 +49,10 @@ public class CustomerController {
 	}
 	
 	@GetMapping("/updateCustomer")
-	public int updateGet(int custid) {
-		return custid;
+	public ModelAndView updateForm(int custid) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("b", dao.findById(custid));
+		return mav;
 		
 	}
 	@PostMapping("updateCustomer")
@@ -58,6 +60,19 @@ public class CustomerController {
 		ModelAndView mav = new ModelAndView();
 		int re = dao.update(c);
 		System.out.println(re);
+		if(re > 0) {
+			mav.setViewName("redirect:/list.do");   //요청할때 사용
+		}
+		return mav;
+	}
+	
+	@GetMapping("/deleteCustomer")
+	public ModelAndView delete(int custid) {
+		ModelAndView mav = new ModelAndView();
+		int re = dao.delete(custid);
+		if(re > 0) {
+			mav.setViewName("redirect:/list.do");
+		}
 		return mav;
 	}
 	

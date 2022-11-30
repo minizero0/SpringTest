@@ -34,7 +34,6 @@ public class DBManager {
 		
 		SqlSession session = sqlSessionFactory.openSession();
 		CustomerVO cv = session.selectOne("customer.findById",custid);
-		System.out.println(cv);
 		session.close();
 		return cv;
 	}
@@ -49,11 +48,20 @@ public class DBManager {
 
 	public static int updateCustomer(CustomerVO c) {
 		// TODO Auto-generated method stub
-		SqlSession session = sqlSessionFactory.openSession();
-		int re = session.update("customer.update",c);
-		session.commit();
+		int re = 0;
+		SqlSession session = sqlSessionFactory.openSession(true); //true는 autocommit하겠다는 의미
+		re = session.update("customer.update",c);
 		session.close();
-		return 0;
+		return re;
+	}
+
+	public static int deleteCustomer(int custid) {
+		// TODO Auto-generated method stub
+		int re = 0;
+		SqlSession session = sqlSessionFactory.openSession(true);
+		re = session.delete("customer.delete", custid);
+		session.close();
+		return re;
 	}
 	
 	

@@ -16,4 +16,7 @@
   <select id="update" parameterType="CustomerVO">
   	update customer set name = #{name}, address = #{address}, phone = #{phone} where custid = #{custid}
   </select>
+  <select id="delete" parameterType="CustomerVO">
+  	delete customer where custid = #{custid}
+  </select>
 </mapper>

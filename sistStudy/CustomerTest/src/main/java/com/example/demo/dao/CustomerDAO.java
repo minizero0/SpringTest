@@ -26,6 +26,11 @@ public class CustomerDAO {
 	public int update(CustomerVO c) {
 		// TODO Auto-generated method stub
 		return DBManager.updateCustomer(c);
+	}
+
+	public int delete(int custid) {
+		// TODO Auto-generated method stub
+		return DBManager.deleteCustomer(custid);
 	} 
 	
 
