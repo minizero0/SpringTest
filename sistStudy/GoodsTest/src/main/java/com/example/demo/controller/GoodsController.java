@@ -43,6 +43,9 @@ public class GoodsController {
 		int re = dao.insert(g);
 		if(re > 0) {
 			mav.setViewName("redirect:/listGoods");
+		}else if(re <= 0) {
+			mav.addObject("msg", "상품 등록에 실패했습니다.");
+			mav.setViewName("error");
 		}
 		return mav;
 	}

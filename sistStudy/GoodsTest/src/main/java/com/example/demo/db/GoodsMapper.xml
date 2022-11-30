@@ -7,7 +7,7 @@
     select * from goods
   </select>
   <select id="insert" parameterType="GoodsVO">
-    insert into goods(no, name, price, qty, fname) values(#{no}, #{name}, #{price}, #{qty}, #{fname})
+    insert into goods(no, name, price, qty, fname) values(seq_goods.nextval, #{name}, #{price}, #{qty}, #{fname})
   </select>
   <select id="findByNo" resultType="GoodsVO">
   	select * from goods where no = #{no}
