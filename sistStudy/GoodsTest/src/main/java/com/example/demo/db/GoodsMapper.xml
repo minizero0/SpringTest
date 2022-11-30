@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="goods">
+  <select id="findAll" resultType="GoodsVO">
+    select * from goods
+  </select>
+  <select id="insert" parameterType="GoodsVO">
+    insert into goods(no, name, price, qty, fname) values(#{no}, #{name}, #{price}, #{qty}, #{fname})
+  </select>
+</mapper>
