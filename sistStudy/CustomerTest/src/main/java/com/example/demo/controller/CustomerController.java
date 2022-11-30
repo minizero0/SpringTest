@@ -25,7 +25,7 @@ public class CustomerController {
 	@RequestMapping("/detailCustomer")
 	public ModelAndView detail(int custid) {
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("detailCustomer", dao.findById(custid));
+		mav.addObject("b", dao.findById(custid));
 		return mav;
 	}
 }

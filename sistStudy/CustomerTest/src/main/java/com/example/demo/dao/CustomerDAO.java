@@ -14,7 +14,7 @@ public class CustomerDAO {
 		return DBManager.findAll();
 	}
 	
-	public List<CustomerVO> findById(int custid){
+	public CustomerVO findById(int custid){
 		return DBManager.findById(custid);
 	} 
 }
