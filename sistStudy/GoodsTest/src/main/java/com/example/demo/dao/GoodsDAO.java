@@ -18,7 +18,15 @@ public class GoodsDAO {
 		return DBManager.insert(g);
 	}
 
-	public Object findByNo(int no) {
+	public GoodsVO findByNo(int no) {
 		return DBManager.findByNo(no);
+	}
+
+	public int update(GoodsVO g) {
+		return DBManager.update(g);
+	}
+
+	public int delete(int no) {
+		return DBManager.delete(no);
 	}
 }

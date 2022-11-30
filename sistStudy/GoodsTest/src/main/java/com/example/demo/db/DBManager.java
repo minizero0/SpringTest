@@ -34,7 +34,7 @@ public class DBManager {
 		SqlSession session = sqlSessionFactory.openSession(true);
 		int re = session.insert("goods.insert",g);
 		session.close();
-		return 0;
+		return re;
 	}
 
 	public static GoodsVO findByNo(int no) {
@@ -42,5 +42,19 @@ public class DBManager {
 		GoodsVO g = session.selectOne("goods.findByNo", no);
 		session.close();
 		return g;
+	}
+
+	public static int update(GoodsVO g) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int re = session.update("goods.update", g);
+		session.close();
+		return re;
+	}
+
+	public static int delete(int no) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int re = session.delete("goods.delete",no);
+		session.close();
+		return re;
 	}
 }
