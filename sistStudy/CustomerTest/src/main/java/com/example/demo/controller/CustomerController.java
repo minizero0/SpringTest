@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.CustomerDAO;
+import com.example.demo.vo.CustomerVO;
 
 @Controller
 public class CustomerController {
@@ -40,8 +41,10 @@ public class CustomerController {
 	
 	//@RequestMapping(value = "/insertCustomer", method = RequestMethod.POST)
 	@PostMapping("/insertCustomer")
-	public ModelAndView insertSubmit() {
+	public ModelAndView insertSubmit(CustomerVO c) {
 		ModelAndView mav = new ModelAndView();
+		int re = dao.insert(c);
+		System.out.println(re);
 		return mav;
 		
 	}

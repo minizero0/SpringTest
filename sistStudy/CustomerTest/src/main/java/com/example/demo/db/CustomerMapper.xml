@@ -10,6 +10,6 @@
     select * from customer where custid = #{custid}
   </select>
   <select id="insert" parameterType="CustomerVO">
-    insert into customer values()
+    insert into customer(custid,name,address,phone) values(#{custid}, #{name}, #{address}, #{phone})
   </select>
 </mapper>
