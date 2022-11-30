@@ -9,4 +9,7 @@
   <select id="insert" parameterType="GoodsVO">
     insert into goods(no, name, price, qty, fname) values(#{no}, #{name}, #{price}, #{qty}, #{fname})
   </select>
+  <select id="findByNo" resultType="GoodsVO">
+  	select * from goods where no = #{no}
+  </select>
 </mapper>

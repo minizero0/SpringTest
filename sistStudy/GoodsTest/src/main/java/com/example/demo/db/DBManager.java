@@ -37,7 +37,7 @@ public class DBManager {
 		return 0;
 	}
 
-	public static GoodsVO detail(int no) {
+	public static GoodsVO findByNo(int no) {
 		SqlSession session = sqlSessionFactory.openSession();
 		GoodsVO g = session.selectOne("goods.findByNo", no);
 		session.close();

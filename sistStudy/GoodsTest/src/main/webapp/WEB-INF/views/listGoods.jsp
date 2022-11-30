@@ -11,6 +11,7 @@
 	<h2>상품목록</h2>
 	<hr>
 	<a href="insertGoods">상품등록</a>
+	<hr>
 	<c:forEach var="g" items="${list }">
 		<a href = "detailGoods?no=${g.no }">${g.no }</a><br>
 	</c:forEach>

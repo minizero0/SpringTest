@@ -19,6 +19,6 @@ public class GoodsDAO {
 	}
 
 	public Object findByNo(int no) {
-		return DBManager.detail(no);
+		return DBManager.findByNo(no);
 	}
 }
