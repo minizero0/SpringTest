@@ -11,11 +11,9 @@
 <h2>고객목록</h2>
 <hr>
 <a href = "insertCustomer">고객등록</a>
-	<c var = "b" items="${list }">
-	<a href="detailCustomer?custid=${b.custid }">${b.custid }</a>
-		${b.name }
-		${b.address }
-		${b.phone }<br>
-	</c>
+	<c:forEach var = "b" items="${list }">
+	<li><a href="detailCustomer?custid=${b.custid }">${b.custid }</a></li>
+		
+	</c:forEach>
 </body>
 </html>

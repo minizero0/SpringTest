@@ -9,4 +9,7 @@
   <select id="findById" resultType="CustomerVO">
     select * from customer where custid = #{custid}
   </select>
+  <select id="insert" parameterType="CustomerVO">
+    insert into customer values()
+  </select>
 </mapper>
