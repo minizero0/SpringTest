@@ -27,6 +27,13 @@ public class GoodsController {
 		return mav;
 	}
 	
+	@RequestMapping("/detailGoods")
+	public ModelAndView detailGoods(int no) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("list", dao.findByNo(no));
+		return mav;
+	}
+	
 	@GetMapping("/insertGoods")
 	public void insertForm() {
 	}

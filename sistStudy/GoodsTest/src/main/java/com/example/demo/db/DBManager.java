@@ -36,4 +36,11 @@ public class DBManager {
 		session.close();
 		return 0;
 	}
+
+	public static GoodsVO detail(int no) {
+		SqlSession session = sqlSessionFactory.openSession();
+		GoodsVO g = session.selectOne("goods.findByNo", no);
+		session.close();
+		return g;
+	}
 }

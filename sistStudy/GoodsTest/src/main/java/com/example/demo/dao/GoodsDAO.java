@@ -17,4 +17,8 @@ public class GoodsDAO {
 	public int insert(GoodsVO g) {
 		return DBManager.insert(g);
 	}
+
+	public Object findByNo(int no) {
+		return DBManager.detail(no);
+	}
 }
