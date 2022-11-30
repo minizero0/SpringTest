@@ -22,7 +22,7 @@ public class DBManager {
 			System.out.println(e.getMessage());
 		}
 	}
-	public static MemberVO findById(int no) {
+	public static MemberVO findByNo(int no) {
 		SqlSession session = sqlSessionFactory.openSession();
 		MemberVO m = session.selectOne("member.findByNo", no);
 		session.close();

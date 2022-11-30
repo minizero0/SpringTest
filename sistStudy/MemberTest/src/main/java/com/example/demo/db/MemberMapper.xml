@@ -6,7 +6,7 @@
   <select id="findAll" resultType="MemberVO">
     select * from member
   </select>
-  <select id="findById" resultType="MemberVO">
+  <select id="findByNo" resultType="MemberVO">
   	select * from member where no = #{no}
   </select>
 </mapper>

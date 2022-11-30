@@ -27,7 +27,7 @@ public class MemberController {
 	@RequestMapping("/detailMember")
 	public ModelAndView detailMember(int no) {
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("m", dao.findById(no));
+		mav.addObject("m", dao.findByNo(no));
 		return mav;
 	}
 

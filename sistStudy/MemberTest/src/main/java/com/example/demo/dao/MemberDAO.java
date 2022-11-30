@@ -10,8 +10,8 @@ import com.example.demo.vo.MemberVO;
 @Repository
 public class MemberDAO {
 
-	public MemberVO findById(int no) {
-		return DBManager.findById(no);
+	public MemberVO findByNo(int no) {
+		return DBManager.findByNo(no);
 	}
 
 	public List<MemberVO> findAll() {

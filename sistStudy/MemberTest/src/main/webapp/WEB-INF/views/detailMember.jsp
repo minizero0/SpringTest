@@ -8,18 +8,17 @@
 <script type="text/javascript">
 	function check(no){
 		if(confirm("정말로 삭제할거야?"))
-			location.href="deleteGoods?no="+no;
+			location.href="deleteMember?no="+no;
 	}
 </script>
 </head>
 <body>
-		번호 : ${list.no }<br>
-		이름 : ${list.name }<br>
-		가격 : ${list.price }<br>
-		개수 : ${list.qty }<br>
-		사진 : ${list.fname }<br>
+		번호 : ${m.no }<br>
+		이름 : ${m.name }<br>
+		나이 : ${m.age }<br>
+		주소 : ${m.addr }<br>
 		<hr>
-		<a href = "updateGoods?no=${list.no }">수정</a>
-		<a href = "#" onclick = "check(${list.no})">삭제</a>
+		<a href = "updateMember?no=${m.no }">수정</a>
+		<a href = "#" onclick = "check(${m.no})">삭제</a>
 </body>
 </html>

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<c:forEach var="m" items="${list }">
-		${m.no }
+		<a href = "detailMember?no=${m.no }">${m.no }</a><br>
 	</c:forEach>
 </body>
 </html>
