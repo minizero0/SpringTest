@@ -72,6 +72,9 @@ public class CustomerController {
 		int re = dao.delete(custid);
 		if(re > 0) {
 			mav.setViewName("redirect:/list.do");
+		}else if(re <= 0 ) {
+			mav.addObject("msg", "고객 삭제에 실패하였습니다.");
+			mav.setViewName("error");
 		}
 		return mav;
 	}
