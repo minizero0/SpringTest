@@ -86,7 +86,7 @@ public class GoodsController {
 		MultipartFile uploadFile = g.getUploadFile();
 		String fname = uploadFile.getOriginalFilename();
 		String path = request.getServletContext().getRealPath("images");
-		System.out.println("path"+path);
+		System.out.println("path:"+path);
 		try {
 			byte[]data = uploadFile.getBytes();
 			FileOutputStream fos = new FileOutputStream(path+"/"+fname);
