@@ -7,9 +7,13 @@
     select no,name,price,qty,fname 
     from (select rownum n, a.* from 
     (select * from goods
-    <if test="keyword != null and keyword != ''"> where ${column} like '%' || #{keyword} || '%'</if> 
+    <if test="keyword != null and keyword != ''"> where ${cate} like '%' || #{keyword} || '%'</if> 
     order by no) a) where n between #{start} and #{end}
-    <if test="column != null">order by ${column}</if>
+    
+    <!-- <if test="keyword != null and keyword != ''"> where ${column} like '%' || #{keyword} || '%'</if> 
+    order by no) a) where n between #{start} and #{end}
+    <if test="column != null">order by ${column}</if> -->
+    
   </select>
   <select id="insert" parameterType="GoodsVO">
     insert into goods(no, name, price, qty, fname) values(seq_goods.nextval, #{name}, #{price}, #{qty}, #{fname})
@@ -27,7 +31,8 @@
   <select id="total" resultType="java.lang.Integer">
   	select count(*) from goods
   	<if test="keyword != null and keyword != ''">
-  		where ${column} like '%' || #{keyword} || '%'
+  		where ${cate} like '%' || #{keyword} || '%'
+  		<!-- where ${column} like '%' || #{keyword} || '%' -->
   	</if>
   </select>
 		

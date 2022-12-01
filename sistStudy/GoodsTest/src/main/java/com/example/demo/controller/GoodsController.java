@@ -38,18 +38,24 @@ public class GoodsController {
 			@RequestParam(value = "pageNUM", defaultValue = "1") int pageNUM, 
 			String column,
 			HttpSession session,
-			String keyword
+			String keyword,
+			String cate
 			) {
+		System.out.println(cate);
 		if(session.getAttribute("column") != null && column == null) {
 			column = (String)session.getAttribute("column");
 		}
 		if(session.getAttribute("keyword") != null && (keyword == null || keyword.equals(""))) {
 			keyword = (String)session.getAttribute("keyword");
 		}
+		if(session.getAttribute("cate") != null && (cate == null || cate.equals(""))) {
+			cate = (String)session.getAttribute("cate");
+		}
 		
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("column", column);
 		map.put("keyword", keyword);
+		map.put("cate", cate);
 		totalRecord = dao.getTotal(map);
 		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
 		int end = pageNUM * pageSIZE;
@@ -67,6 +73,7 @@ public class GoodsController {
 		mav.addObject("list", dao.findAll(map));
 		session.setAttribute("column", column);
 		session.setAttribute("keyword", keyword);
+		session.setAttribute("cate", cate);
 		return mav;
 	}
 	

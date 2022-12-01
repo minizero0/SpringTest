@@ -23,6 +23,13 @@
 	<a href="insertGoods">상품등록</a>
 
 	<form action="listGoods" method = "get">
+		<select name = "cate">
+			<option value = "no">no</option>
+			<option value = "name">name</option>
+			<option value = "price">price</option>
+			<option value = "qty">qty</option>
+			<option value = "fname">fname</option>
+		</select>
 		상품이름 : <input type = "search" name = "keyword">
 		<input type = "submit" value = "검색">
 	</form>
