@@ -46,7 +46,7 @@
 	
 	<hr>
 	<c:forEach var="i" begin = "1" end = "${totalPage }">
-		<a href = "listGoods?pageNUM=${i }">${i }</a>&nbsp;&nbsp;
+		<a href = "listGoods?pageNUM=${i }&column=<%=session.getAttribute("column")%>">${i }</a>&nbsp;&nbsp;
 	</c:forEach>
 </body>
 </html>

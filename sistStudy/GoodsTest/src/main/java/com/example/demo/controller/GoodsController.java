@@ -13,6 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.demo.dao.GoodsDAO;
 import com.example.demo.vo.GoodsVO;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class GoodsController {
 	
@@ -28,7 +30,10 @@ public class GoodsController {
 	}
 	
 	@RequestMapping("/listGoods")
-	public ModelAndView listGoods(@RequestParam(value = "pageNUM", defaultValue = "1") int pageNUM, String column) {
+	public ModelAndView listGoods(
+			@RequestParam(value = "pageNUM", defaultValue = "1") int pageNUM, 
+			String column,
+			HttpSession session) {
 		totalRecord = dao.getTotal();
 		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
 		HashMap<String, Object> map = new HashMap<>();
@@ -41,6 +46,7 @@ public class GoodsController {
 		map.put("start", start); 
 		map.put("end", end);
 		map.put("column", column);
+		session.setAttribute("column", column);
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("totalPage", totalPage);
 		mav.addObject("pageNUM", pageNUM);
