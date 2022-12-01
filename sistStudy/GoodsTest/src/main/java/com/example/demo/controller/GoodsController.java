@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
+import java.io.FileOutputStream;
 import java.util.HashMap;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,11 +10,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.GoodsDAO;
 import com.example.demo.vo.GoodsVO;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
@@ -77,8 +81,22 @@ public class GoodsController {
 	public void insertForm() {
 	}
 	@PostMapping("/insertGoods")
-	public ModelAndView insertSubmit(GoodsVO g) {
+	public ModelAndView insertSubmit(GoodsVO g, HttpServletRequest request) {
 		ModelAndView mav = new ModelAndView();
+		MultipartFile uploadFile = g.getUploadFile();
+		String fname = uploadFile.getOriginalFilename();
+		String path = request.getServletContext().getRealPath("images");
+		System.out.println("path"+path);
+		try {
+			byte[]data = uploadFile.getBytes();
+			FileOutputStream fos = new FileOutputStream(path+"/"+fname);
+			fos.write(data);
+			fos.close();
+		}catch (Exception e) {
+			System.out.println("예외발생:"+e.getMessage());
+		}
+		g.setFname(fname);
+		
 		int re = dao.insert(g);
 		if(re > 0) {
 			mav.setViewName("redirect:/listGoods");
