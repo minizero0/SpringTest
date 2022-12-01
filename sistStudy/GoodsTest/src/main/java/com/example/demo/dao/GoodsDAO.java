@@ -31,7 +31,7 @@ public class GoodsDAO {
 		return DBManager.delete(no);
 	}
 	
-	public int getTotal() {
-		return DBManager.getTotal();
+	public int getTotal(String session_keyword) {
+		return DBManager.getTotal(session_keyword);
 	}
 }

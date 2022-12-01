@@ -59,10 +59,10 @@ public class DBManager {
 		return re;
 	}
 	
-	public static int getTotal() {
+	public static int getTotal(String session_keyword) {
 		int cnt = 0;
 		SqlSession session = sqlSessionFactory.openSession();
-		cnt = session.selectOne("goods.total");
+		cnt = session.selectOne("goods.total", session_keyword);
 		session.close();
 		return cnt;
 	}
