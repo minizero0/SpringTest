@@ -28,10 +28,10 @@ public class GoodsController {
 	}
 	
 	@RequestMapping("/listGoods")
-	public ModelAndView listGoods(@RequestParam(value = "pageNUM", defaultValue = "1") int pageNUM) {
+	public ModelAndView listGoods(@RequestParam(value = "pageNUM", defaultValue = "1") int pageNUM, String column) {
 		totalRecord = dao.getTotal();
 		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
-		HashMap<String, Integer> map = new HashMap<>();
+		HashMap<String, Object> map = new HashMap<>();
 		int end = pageNUM * pageSIZE;
 		int start = end - pageSIZE + 1;
 		/*
@@ -40,8 +40,10 @@ public class GoodsController {
 		 * */
 		map.put("start", start); 
 		map.put("end", end);
+		map.put("column", column);
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("totalPage", totalPage);
+		mav.addObject("pageNUM", pageNUM);
 		mav.addObject("list", dao.findAll(map));
 		return mav;
 	}

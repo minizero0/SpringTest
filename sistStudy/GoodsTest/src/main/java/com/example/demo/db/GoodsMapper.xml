@@ -5,6 +5,9 @@
 <mapper namespace="goods">
   <select id="findAll" resultType="GoodsVO">
     select no,name,price,qty,fname from (select rownum n, a.* from (select * from goods order by no) a) where n between #{start} and #{end}
+    <if test="column != null">
+    order by ${column}
+  </if>
   </select>
   <select id="insert" parameterType="GoodsVO">
     insert into goods(no, name, price, qty, fname) values(seq_goods.nextval, #{name}, #{price}, #{qty}, #{fname})

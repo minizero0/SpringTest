@@ -24,7 +24,7 @@ public class DBManager {
 		}
 	}
 	
-	public static List<GoodsVO> findAll(HashMap<String, Integer> map){
+	public static List<GoodsVO> findAll(HashMap<String, Object> map){
 		SqlSession session = sqlSessionFactory.openSession();
 		List<GoodsVO> list = session.selectList("goods.findAll", map);
 		session.close();

@@ -6,6 +6,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("th").click(function(){
+			var column = $(this).html();
+			location.href = "listGoods?pageNUM="+${pageNUM}+"&column="+column;
+		})
+	})
+</script>
 </head>
 <body>
 	<h2>상품목록</h2>
@@ -15,11 +24,11 @@
 	<table border = "1">
 		<thead>
 			<tr>
-				<th>No</th>
-				<th>Name</th>
-				<th>Price</th>
-				<th>Qty</th>
-				<th>Fname</th>
+				<th>no</th>
+				<th>name</th>
+				<th>price</th>
+				<th>qty</th>
+				<th>fname</th>
 			</tr>
 		</thead>
 		<tbody>

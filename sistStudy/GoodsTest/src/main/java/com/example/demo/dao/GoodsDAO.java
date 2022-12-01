@@ -11,7 +11,7 @@ import com.example.demo.vo.GoodsVO;
 @Repository
 public class GoodsDAO {
 	
-	public List<GoodsVO> findAll(HashMap<String, Integer> map){
+	public List<GoodsVO> findAll(HashMap<String, Object> map){
 		return DBManager.findAll(map);
 	}
 
