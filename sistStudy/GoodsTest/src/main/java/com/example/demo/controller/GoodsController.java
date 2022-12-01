@@ -30,11 +30,14 @@ public class GoodsController {
 	@RequestMapping("/listGoods")
 	public ModelAndView listGoods(@RequestParam(value = "pageNUM", defaultValue = "1") int pageNUM) {
 		totalRecord = dao.getTotal();
-		System.out.println(totalRecord);
 		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
 		HashMap<String, Integer> map = new HashMap<>();
 		int end = pageNUM * pageSIZE;
 		int start = end - pageSIZE + 1;
+		/*
+		 * int start = (pageNUM-1)*pageSZIE+1;
+		 * int end = start + pageSIZE - 1;
+		 * */
 		map.put("start", start); 
 		map.put("end", end);
 		ModelAndView mav = new ModelAndView();
