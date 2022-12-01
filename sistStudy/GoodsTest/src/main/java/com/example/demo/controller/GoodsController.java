@@ -33,7 +33,17 @@ public class GoodsController {
 	public ModelAndView listGoods(
 			@RequestParam(value = "pageNUM", defaultValue = "1") int pageNUM, 
 			String column,
-			HttpSession session) {
+			HttpSession session,
+			String keyword
+			) {
+		String session_column = null;
+		if(session.getAttribute("session_column") != null) {
+			session_column = (String)session.getAttribute("session_column");
+		}
+		//파라메터로 전달되는(다시 정렬하는) 값을 갖고 오고 싶어요
+		if(column != null && !column.equals("")) {
+			session_column = column;
+		}
 		totalRecord = dao.getTotal();
 		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
 		HashMap<String, Object> map = new HashMap<>();
@@ -45,12 +55,13 @@ public class GoodsController {
 		 * */
 		map.put("start", start); 
 		map.put("end", end);
-		map.put("column", column);
-		session.setAttribute("column", column);
+		map.put("column", session_column);
+		map.put("keyword", keyword);
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("totalPage", totalPage);
 		mav.addObject("pageNUM", pageNUM);
 		mav.addObject("list", dao.findAll(map));
+		session.setAttribute("session_column", session_column);
 		return mav;
 	}
 	

@@ -9,8 +9,9 @@
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	$(function(){
+		var column;
 		$("th").click(function(){
-			var column = $(this).html();
+			column = $(this).html();
 			location.href = "listGoods?pageNUM="+${pageNUM}+"&column="+column;
 		})
 	})
@@ -20,6 +21,12 @@
 	<h2>상품목록</h2>
 	<hr>
 	<a href="insertGoods">상품등록</a>
+
+	<form action="listGoods" method = "get">
+		상품이름 : <input type = "search" name = "keyword">
+		<input type = "submit" value = "검색">
+	</form>
+	
 	<hr>
 	<table border = "1">
 		<thead>
@@ -46,7 +53,7 @@
 	
 	<hr>
 	<c:forEach var="i" begin = "1" end = "${totalPage }">
-		<a href = "listGoods?pageNUM=${i }&column=<%=session.getAttribute("column")%>">${i }</a>&nbsp;&nbsp;
+		<a href = "listGoods?pageNUM=${i }&column=<%=session.getAttribute("session_column")%>">${i }</a>&nbsp;&nbsp;
 	</c:forEach>
 </body>
 </html>
