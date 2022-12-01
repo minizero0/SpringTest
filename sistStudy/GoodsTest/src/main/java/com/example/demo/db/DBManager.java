@@ -57,4 +57,12 @@ public class DBManager {
 		session.close();
 		return re;
 	}
+	
+	public static int getTotal() {
+		int cnt = 0;
+		SqlSession session = sqlSessionFactory.openSession();
+		cnt = session.selectOne("goods.total");
+		session.close();
+		return cnt;
+	}
 }
