@@ -1,6 +1,7 @@
 package com.example.demo.db;
 
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
@@ -23,9 +24,9 @@ public class DBManager {
 		}
 	}
 	
-	public static List<GoodsVO> findAll(){
+	public static List<GoodsVO> findAll(HashMap<String, Integer> map){
 		SqlSession session = sqlSessionFactory.openSession();
-		List<GoodsVO> list = session.selectList("goods.findAll");
+		List<GoodsVO> list = session.selectList("goods.findAll", map);
 		session.close();
 		return list;
 	}

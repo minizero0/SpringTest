@@ -15,5 +15,9 @@
 	<c:forEach var="g" items="${list }">
 		<a href = "detailGoods?no=${g.no }">${g.no }</a><br>
 	</c:forEach>
+	<hr>
+	<c:forEach var="i" begin = "1" end = "${totalPage }">
+		<a href = "listGoods?pageNUM=${i }">${i }</a>&nbsp;&nbsp;
+	</c:forEach>
 </body>
 </html>

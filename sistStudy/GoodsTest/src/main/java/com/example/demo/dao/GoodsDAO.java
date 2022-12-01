@@ -1,5 +1,6 @@
 package com.example.demo.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
@@ -10,8 +11,8 @@ import com.example.demo.vo.GoodsVO;
 @Repository
 public class GoodsDAO {
 	
-	public List<GoodsVO> findAll(){
-		return DBManager.findAll();
+	public List<GoodsVO> findAll(HashMap<String, Integer> map){
+		return DBManager.findAll(map);
 	}
 
 	public int insert(GoodsVO g) {
@@ -28,5 +29,9 @@ public class GoodsDAO {
 
 	public int delete(int no) {
 		return DBManager.delete(no);
+	}
+	
+	public int getTotal() {
+		return DBManager.getTotal();
 	}
 }
