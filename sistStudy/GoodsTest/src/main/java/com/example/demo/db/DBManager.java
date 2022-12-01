@@ -59,10 +59,10 @@ public class DBManager {
 		return re;
 	}
 	
-	public static int getTotal(String session_keyword) {
+	public static int getTotal(HashMap<String, Object> map) {
 		int cnt = 0;
 		SqlSession session = sqlSessionFactory.openSession();
-		cnt = session.selectOne("goods.total", session_keyword);
+		cnt = session.selectOne("goods.total", map);
 		session.close();
 		return cnt;
 	}

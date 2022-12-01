@@ -31,7 +31,7 @@ public class GoodsDAO {
 		return DBManager.delete(no);
 	}
 	
-	public int getTotal(String session_keyword) {
-		return DBManager.getTotal(session_keyword);
+	public int getTotal(HashMap<String, Object> map) {
+		return DBManager.getTotal(map);
 	}
 }

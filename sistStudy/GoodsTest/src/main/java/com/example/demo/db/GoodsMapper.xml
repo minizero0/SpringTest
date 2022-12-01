@@ -27,7 +27,7 @@
   <select id="total" resultType="java.lang.Integer">
   	select count(*) from goods
   	<if test="keyword != null and keyword != ''">
-  		where name like '%' || #{keyword} || '%'
+  		where ${column} like '%' || #{keyword} || '%'
   	</if>
   </select>
 		

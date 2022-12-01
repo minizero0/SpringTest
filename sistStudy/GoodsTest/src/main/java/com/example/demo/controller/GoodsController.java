@@ -36,24 +36,18 @@ public class GoodsController {
 			HttpSession session,
 			String keyword
 			) {
-		String session_column = null;
-		String session_keyword = null;
-		if(session.getAttribute("session_column") != null) {
-			session_column = (String)session.getAttribute("session_column");
+		if(session.getAttribute("column") != null && column == null) {
+			column = (String)session.getAttribute("column");
 		}
-		if(session.getAttribute("session_keyword") != null) {
-			session_keyword = (String)session.getAttribute("session_keyword");
+		if(session.getAttribute("keyword") != null && (keyword == null || keyword.equals(""))) {
+			keyword = (String)session.getAttribute("keyword");
 		}
-		//파라메터로 전달되는(다시 정렬하는) 값을 갖고 오고 싶어요
-		if(column != null && !column.equals("")) {
-			session_column = column;
-		}
-		if(keyword != null && !keyword.equals("")) {
-			session_keyword = keyword;
-		}
-		totalRecord = dao.getTotal(session_keyword);
-		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
+		
 		HashMap<String, Object> map = new HashMap<>();
+		map.put("column", column);
+		map.put("keyword", keyword);
+		totalRecord = dao.getTotal(map);
+		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
 		int end = pageNUM * pageSIZE;
 		int start = end - pageSIZE + 1;
 		/*
@@ -62,14 +56,13 @@ public class GoodsController {
 		 * */
 		map.put("start", start); 
 		map.put("end", end);
-		map.put("column", session_column);
-		map.put("keyword", session_keyword);
+		
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("totalPage", totalPage);
 		mav.addObject("pageNUM", pageNUM);
 		mav.addObject("list", dao.findAll(map));
-		session.setAttribute("session_column", session_column);
-		session.setAttribute("session_keyword", session_keyword);
+		session.setAttribute("column", column);
+		session.setAttribute("keyword", keyword);
 		return mav;
 	}
 	
