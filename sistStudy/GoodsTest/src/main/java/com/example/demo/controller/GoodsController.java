@@ -41,9 +41,19 @@ public class GoodsController {
 			HttpSession session,
 			String keyword,
 			String op,
+			String reset,
 			String cate
 			) {
+		
+		if(reset != null && reset.equals("yes")) {
+			session.removeAttribute("cate");
+			session.removeAttribute("op");
+			session.removeAttribute("keyword");
+		}
+		
 		System.out.println(cate);
+		System.out.println(op);
+		System.out.println(keyword);
 		if(session.getAttribute("column") != null && column == null) {
 			column = (String)session.getAttribute("column");
 		}
@@ -79,6 +89,7 @@ public class GoodsController {
 		session.setAttribute("keyword", keyword);
 		session.setAttribute("cate", cate);
 		session.setAttribute("op", op);
+		System.out.println(cate);
 		return mav;
 	}
 	

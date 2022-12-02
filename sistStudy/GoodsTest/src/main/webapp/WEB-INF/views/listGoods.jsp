@@ -11,10 +11,26 @@
 	#op{
 		display:none;
 	}
+	
+	#f, reBtn{
+		display: inline;
+	}
+	
 </style>
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	$(function(){
+		
+		$("#reBtn").click(function(){
+			sessionStorage.removeItem("cate")
+			sessionStorage.removeItem("op")
+			sessionStorage.removeItem("keyword")
+			<% 
+			
+			%>
+			location.href = "listGoods?reset=yes";
+		})
+		
 		var column;
 		$("th").click(function(){
 			column = $(this).html();
@@ -82,8 +98,9 @@
 		상품이름 : <input type = "search" name = "keyword" id = "keyword">
 		<input type = "submit" value = "검색">
 	</form>
-	
+	<button id = "reBtn">초기화</button>
 	<hr>
+	
 	<table border = "1">
 		<thead>
 			<tr>
