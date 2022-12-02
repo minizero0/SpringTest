@@ -7,7 +7,11 @@
     select no,name,price,qty,fname 
     from (select rownum n, a.* from 
     (select * from goods
-    <if test="keyword != null and keyword != ''"> where ${cate} like '%' || #{keyword} || '%'</if> 
+    <!--  <if test="keyword != null and keyword != ''"> where ${cate} like '%' || #{keyword} || '%'</if>-->
+    <if test="keyword != null and keyword != ''">
+    	<if test="cate == 'name'"> where name like '%' || #{keyword} || '%'</if> 
+    	<if test="cate != 'name'"> where ${cate} ${op} #{keyword}</if>
+    </if>
     order by no) a) where n between #{start} and #{end}
     
     <!-- <if test="keyword != null and keyword != ''"> where ${column} like '%' || #{keyword} || '%'</if> 
@@ -31,8 +35,11 @@
   <select id="total" resultType="java.lang.Integer">
   	select count(*) from goods
   	<if test="keyword != null and keyword != ''">
-  		where ${cate} like '%' || #{keyword} || '%'
-  		<!-- where ${column} like '%' || #{keyword} || '%' -->
+  		<if test="cate == 'name'"> where name like '%' || #{keyword} || '%'</if> 
+    	<if test="cate != 'name'"> where ${cate} ${op} #{keyword}</if>
+  		
+  		<!-- where ${column} like '%' || #{keyword} || '%' 
+  		where ${cate} like '%' || #{keyword} || '%'-->
   	</if>
   </select>
 		

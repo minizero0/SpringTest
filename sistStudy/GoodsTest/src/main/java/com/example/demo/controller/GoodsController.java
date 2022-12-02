@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.util.HashMap;
 
@@ -39,6 +40,7 @@ public class GoodsController {
 			String column,
 			HttpSession session,
 			String keyword,
+			String op,
 			String cate
 			) {
 		System.out.println(cate);
@@ -47,15 +49,17 @@ public class GoodsController {
 		}
 		if(session.getAttribute("keyword") != null && (keyword == null || keyword.equals(""))) {
 			keyword = (String)session.getAttribute("keyword");
-		}
-		if(session.getAttribute("cate") != null && (cate == null || cate.equals(""))) {
 			cate = (String)session.getAttribute("cate");
+			if(!cate.equals("name")) {
+				op = (String)session.getAttribute("op");
+			}
 		}
 		
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("column", column);
 		map.put("keyword", keyword);
 		map.put("cate", cate);
+		map.put("op", op);
 		totalRecord = dao.getTotal(map);
 		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
 		int end = pageNUM * pageSIZE;
@@ -74,6 +78,7 @@ public class GoodsController {
 		session.setAttribute("column", column);
 		session.setAttribute("keyword", keyword);
 		session.setAttribute("cate", cate);
+		session.setAttribute("op", op);
 		return mav;
 	}
 	
@@ -147,6 +152,12 @@ public class GoodsController {
 		if(dao.update(g) <= 0) {
 			mav.addObject("msg", "상품 수정에 실패하였습니다.");
 			mav.setViewName("error");
+		} else {
+			//수정에 성공하고 파일도 수정했다면 원래 파일 삭제
+			if(fname != null && !fname.equals("")) {
+				File file = new File(path+"/"+oldFname);
+				file.delete();
+			}
 		}
 		return mav;
 	}

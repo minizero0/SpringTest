@@ -6,6 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+
+	#op{
+		display:none;
+	}
+</style>
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	$(function(){
@@ -13,6 +19,15 @@
 		$("th").click(function(){
 			column = $(this).html();
 			location.href = "listGoods?pageNUM="+${pageNUM}+"&column="+column;
+		})
+		
+		$("#cate").change(function(){
+			var c_name = $(this).val();
+			if(c_name == "name"){
+				$("#op").css("display","none")
+			}else{
+				$("#op").css("display","inline")
+			}
 		})
 	})
 </script>
@@ -23,12 +38,20 @@
 	<a href="insertGoods">상품등록</a>
 
 	<form action="listGoods" method = "get">
-		<select name = "cate">
+		<select name = "cate" id = "cate">
 			<option value = "no">no</option>
-			<option value = "name">name</option>
+			<option value = "name" selected="selected">name</option>
 			<option value = "price">price</option>
 			<option value = "qty">qty</option>
 			<option value = "fname">fname</option>
+		</select >
+		<select id = "op" name = "op">
+			<option>=</option>
+			<option>>=</option>
+			<option><=</option>
+			<option>></option>
+			<option><</option>
+			<option>!=</option>
 		</select>
 		상품이름 : <input type = "search" name = "keyword">
 		<input type = "submit" value = "검색">
