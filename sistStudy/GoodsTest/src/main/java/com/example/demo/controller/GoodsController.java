@@ -131,6 +131,7 @@ public class GoodsController {
 			System.out.println("사진을 수정하지 않아요");
 		}else {
 			System.out.println("사진도 수정합니다.");
+			//파일복사
 			try {
 				byte[]data = uploadFile.getBytes();
 				FileOutputStream fos = new FileOutputStream(path+"/"+fname);
@@ -139,6 +140,7 @@ public class GoodsController {
 			}catch (Exception e) {
 				System.out.println("예외발생:"+e.getMessage());
 			}
+			//수정할 파일이름을 vo에 저장 
 			g.setFname(fname);
 		}
 		
