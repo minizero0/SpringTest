@@ -123,12 +123,11 @@ public class GoodsController {
 	@PostMapping("/updateGoods")
 	public ModelAndView updateSubmit(GoodsVO g) {
 		ModelAndView mav = new ModelAndView();
-		int re = dao.update(g);
-		if(re>0) {
-			mav.setViewName("redirect:/detailGoods?no="+g.getNo());
-		}else if (re <= 0) {
-			mav.addObject("msg", "상품 수정에 실패했습니다.");
-			mav.setViewName("error");
+		MultipartFile uploadFile = g.getUploadFile();
+		if(uploadFile == null) {
+			System.out.println("사진을 수정하지 않아요");
+		}else {
+			System.out.println("사진도 수정합니다.");
 		}
 		return mav;
 	}
