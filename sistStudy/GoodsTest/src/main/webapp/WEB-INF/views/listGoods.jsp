@@ -29,6 +29,20 @@
 				$("#op").css("display","inline")
 			}
 		})
+		
+		$("#f").submit(function(){
+			var cate = $("#cate").val();
+			var op = $("#op").val();
+			var keyword = $("#keyword").val();
+			
+			sessionStorage.setItem("cate",cate);
+			sessionStorage.setItem("op",op);
+			sessionStorage.setItem("keyword",keyword);
+		})
+		
+		var sc = sessionStorage.getItem("cate");
+		
+		$("#cate > option[value="+sc+"]").attr("selected","selected");
 	})
 </script>
 </head>
@@ -37,7 +51,7 @@
 	<hr>
 	<a href="insertGoods">상품등록</a>
 
-	<form action="listGoods" method = "get">
+	<form action="listGoods" method = "get" id = "f">
 		<select name = "cate" id = "cate">
 			<option value = "no">no</option>
 			<option value = "name" selected="selected">name</option>
@@ -53,7 +67,7 @@
 			<option><</option>
 			<option>!=</option>
 		</select>
-		상품이름 : <input type = "search" name = "keyword">
+		상품이름 : <input type = "search" name = "keyword" id = "keyword">
 		<input type = "submit" value = "검색">
 	</form>
 	
