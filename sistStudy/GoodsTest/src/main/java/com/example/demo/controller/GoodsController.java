@@ -121,13 +121,30 @@ public class GoodsController {
 		return mav;
 	}
 	@PostMapping("/updateGoods")
-	public ModelAndView updateSubmit(GoodsVO g) {
-		ModelAndView mav = new ModelAndView();
+	public ModelAndView updateSubmit(GoodsVO g, HttpServletRequest request) {
+		ModelAndView mav = new ModelAndView("redirect:/listGoods");
 		MultipartFile uploadFile = g.getUploadFile();
-		if(uploadFile == null) {
+		String fname = uploadFile.getOriginalFilename();
+		String oldFname = g.getFname();
+		String path = request.getServletContext().getRealPath("images");
+		if(uploadFile == null || fname.equals("")) {
 			System.out.println("사진을 수정하지 않아요");
 		}else {
 			System.out.println("사진도 수정합니다.");
+			try {
+				byte[]data = uploadFile.getBytes();
+				FileOutputStream fos = new FileOutputStream(path+"/"+fname);
+				fos.write(data);
+				fos.close();
+			}catch (Exception e) {
+				System.out.println("예외발생:"+e.getMessage());
+			}
+			g.setFname(fname);
+		}
+		
+		if(dao.update(g) <= 0) {
+			mav.addObject("msg", "상품 수정에 실패하였습니다.");
+			mav.setViewName("error");
 		}
 		return mav;
 	}
