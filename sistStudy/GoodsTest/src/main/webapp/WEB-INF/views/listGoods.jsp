@@ -21,7 +21,7 @@
 			location.href = "listGoods?pageNUM="+${pageNUM}+"&column="+column;
 		})
 		
-		$("#cate").change(function(){
+	 	$("#cate").change(function(){
 			var c_name = $(this).val();
 			if(c_name == "name"){
 				$("#op").css("display","none")
@@ -29,7 +29,6 @@
 				$("#op").css("display","inline")
 			}
 		})
-		
 		$("#f").submit(function(){
 			var cate = $("#cate").val();
 			var op = $("#op").val();
@@ -41,8 +40,21 @@
 		})
 		
 		var sc = sessionStorage.getItem("cate");
+		var op = sessionStorage.getItem("op");
+		var keyword = sessionStorage.getItem("keyword");
 		
 		$("#cate > option[value="+sc+"]").attr("selected","selected");
+		$("#op > option[value='"+op+"']").attr("selected","selected");
+		if(keyword != null && keyword != "null"){
+			$("#keyword").val(keyword);
+		}
+		
+		if(sc=="name" || sc ==null){
+			$("#op").css("display","none");
+		}else{
+			$("#op").css("display","inline");
+		}
+		
 	})
 </script>
 </head>
@@ -60,12 +72,12 @@
 			<option value = "fname">fname</option>
 		</select >
 		<select id = "op" name = "op">
-			<option>=</option>
-			<option>>=</option>
-			<option><=</option>
-			<option>></option>
-			<option><</option>
-			<option>!=</option>
+			<option value = "=">=</option>
+			<option value = ">=">>=</option>
+			<option value = "<="><=</option>
+			<option value = ">">></option>
+			<option value = "<"><</option>
+			<option value = "!=">!=</option>
 		</select>
 		상품이름 : <input type = "search" name = "keyword" id = "keyword">
 		<input type = "submit" value = "검색">
