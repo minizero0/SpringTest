@@ -7,13 +7,19 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-	.high_ligh{
+	.high_light{
 		background: pink;
 	}
 </style>
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	$(function(){
+		
+		$(".row").click(function(){
+			var no = $(this).attr("no");
+			location.href = "detailBoard?no="+no;
+		})
+		
 		$(".row").hover(function(){
 			$(this).addClass("high_light");
 		}, function(){
@@ -34,7 +40,7 @@
 		<td>등록일</td>
 	</tr>
 	<c:forEach var = "b" items = "${list }">
-	<tr class = "row" no= "${b.no }">
+	<tr class = "row" no = "${b.no }">
 		<td>${b.no}</td>
 		<td>${b.title}</td>
 		<td>${b.writer}</td>

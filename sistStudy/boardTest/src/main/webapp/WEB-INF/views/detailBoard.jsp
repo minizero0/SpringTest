@@ -16,7 +16,8 @@
 	글제목 : ${b.title}<br>
 	작성자 : ${b.writer }<br>
 	글내용 : <br>
-	${b.content }<br>
+	<textarea rows="10" cols="80">${b.content }</textarea>
+	<br>
 	조회수 : ${b.hit }<br>
 	등록일 : ${b.regdate }<br>
 	파일명 : ${b.fname }<br>
