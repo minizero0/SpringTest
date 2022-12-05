@@ -27,5 +27,9 @@ public class BoardController {
 	public void detail(Model model, int no) {
 		model.addAttribute("b", dao.findByNo(no));
 	}
+	@GetMapping("/deleteBoard")
+	public void delete(int no) {
+		dao.delete(no);
+	}
 	
 }

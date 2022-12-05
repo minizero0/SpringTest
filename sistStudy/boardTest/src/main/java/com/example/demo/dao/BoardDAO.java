@@ -27,4 +27,13 @@ public class BoardDAO {
 		return DBManager.findByNo(no);
 	}
 
+	public int update(BoardVO b) {
+		return DBManager.update(b);
+	}
+
+	public int delete(int no) {
+		return DBManager.delete(no);
+		
+	}
+
 }

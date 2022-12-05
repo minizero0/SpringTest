@@ -12,10 +12,15 @@
  	<select id="findByNo" resultType="BoardVO">
  		select * from board where no =#{no}
  	</select>
-  
+	  
   <insert id="insert" parameterType="BoardVO">
   	insert into board(no,writer,pwd,title,content,regdate,hit,fname,b_ref,b_step,b_level) 
   	values(#{no},#{writer},#{pwd},#{title},#{content},sysdate,0,#{fname},#{b_ref},
   	#{b_step},#{b_level})
   </insert>
+  
+  <update id ="update" parameterType="BoardVO">
+  	update board set title = #{title}, content = #{content}, fname = #{fname} 
+  	where no = #{no} and pwd = #{pwd}
+  </update>
 </mapper>

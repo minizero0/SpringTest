@@ -53,4 +53,20 @@ public class DBManager {
 		session.close();
 		return b;
 	}
+
+	public static int update(BoardVO b) {
+		int re = -1;
+		SqlSession session = sqlSessionFactory.openSession(true);
+		re = session.update("board.update",b);
+		session.close();
+		return re;
+	}
+
+	public static int delete(int no) {
+		int re = -1;
+		SqlSession session = sqlSessionFactory.openSession(true);
+		re = session.update("board.delete",no);
+		session.close();
+		return re;
+	}
 }

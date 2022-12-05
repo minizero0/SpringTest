@@ -12,6 +12,7 @@
 	<a href = "insertBoard">등록</a>
 	<a href = "listBoard">목록</a>
 	<a href = "updateBoard?no=${b.no }">수정</a>
+	<a href = "deleteBoard?no=${b.no }">삭제</a>
 	<br>	
 	글번호 : ${b.no }<br>
 	글제목 : ${b.title}<br>
