@@ -45,5 +45,12 @@ public class DBManager {
 		session.close();
 		return re;
 	}
-
+	
+	public static BoardVO findByNo(int no) {
+		BoardVO b = null;
+		SqlSession session = sqlSessionFactory.openSession();
+		b = session.selectOne("board.findByNo", no);
+		session.close();
+		return b;
+	}
 }

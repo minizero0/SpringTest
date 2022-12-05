@@ -39,6 +39,7 @@ public class InsertBoardController {
 		String fname = uploadFile.getOriginalFilename();
 		try {
 			byte[] data = uploadFile.getBytes();
+			System.out.println(path);
 			FileOutputStream fos = new FileOutputStream(path + "/" + fname);
 			fos.write(data);
 			fos.close();

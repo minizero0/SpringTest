@@ -9,6 +9,9 @@
   <select id="getNextNo"  resultType="java.lang.Integer">
   	select nvl(max(no), 0)+1 from board
   </select>
+ 	<select id="findByNo" resultType="BoardVO">
+ 		select * from board where no =#{no}
+ 	</select>
   
   <insert id="insert" parameterType="BoardVO">
   	insert into board(no,writer,pwd,title,content,regdate,hit,fname,b_ref,b_step,b_level) 

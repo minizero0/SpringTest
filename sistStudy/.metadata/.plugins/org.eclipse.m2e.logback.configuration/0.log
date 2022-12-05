@@ -5128,3 +5128,57 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.mybatis.s
 2022-12-05 09:08:33,893 [Worker-196: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
 2022-12-05 09:08:33,893 [Worker-196: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
 2022-12-05 09:08:33,895 [Worker-196: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/GoodsTest/src/test/resources
+2022-12-05 09:13:12,397 [Worker-198: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:13:12,399 [Worker-198: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:13:12,408 [Worker-198: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/GoodsTest/src/test/resources
+2022-12-05 09:13:12,477 [Worker-198: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:13:12,478 [Worker-198: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:13:12,481 [Worker-198: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:28:00,027 [Worker-204: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:28:00,326 [Worker-204: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:28:00,331 [Worker-204: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:31:03,297 [Worker-209: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:31:03,299 [Worker-209: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:31:03,302 [Worker-209: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:31:19,101 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:31:19,101 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:31:19,104 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/GoodsTest/src/test/resources
+2022-12-05 09:33:59,743 [Worker-212: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:33:59,820 [Worker-212: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:33:59,828 [Worker-212: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:34:47,841 [Worker-209: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:34:47,849 [Worker-209: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:34:47,852 [Worker-209: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:35:13,935 [Worker-214: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:35:14,444 [Worker-214: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:35:14,446 [Worker-214: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:35:52,911 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:35:52,932 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:35:52,934 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:35:59,833 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:35:59,838 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:35:59,840 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:36:36,860 [Worker-211: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:36:37,180 [Worker-211: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:36:37,182 [Worker-211: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:36:39,295 [Worker-211: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:36:39,379 [Worker-211: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:36:39,384 [Worker-211: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:37:00,011 [Worker-209: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:37:00,042 [Worker-209: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:37:00,048 [Worker-209: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:37:03,428 [Worker-208: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:37:03,609 [Worker-208: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:37:03,660 [Worker-208: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:38:20,003 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:38:20,075 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:38:20,078 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:38:58,106 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:38:58,170 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:38:58,172 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:39:04,892 [Worker-211: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:39:04,986 [Worker-211: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:39:04,989 [Worker-211: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources
+2022-12-05 09:39:45,088 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-05 09:39:45,126 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-05 09:39:45,131 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTest/src/test/resources

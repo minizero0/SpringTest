@@ -22,5 +22,9 @@ public class BoardDAO {
 	public int insert(BoardVO b) {
 		return DBManager.insert(b);
 	}
+	
+	public BoardVO findByNo(int no) {
+		return DBManager.findByNo(no);
+	}
 
 }

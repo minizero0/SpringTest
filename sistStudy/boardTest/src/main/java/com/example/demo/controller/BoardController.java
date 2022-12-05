@@ -20,8 +20,12 @@ public class BoardController {
 	
 	@GetMapping("/listBoard")
 	public void listBoard(Model model) {
-		
 		model.addAttribute("list", dao.findAll());
+	}
+	
+	@GetMapping("/detailBoard")
+	public void detail(Model model, int no) {
+		model.addAttribute("b", dao.findByNo(no));
 	}
 	
 }
