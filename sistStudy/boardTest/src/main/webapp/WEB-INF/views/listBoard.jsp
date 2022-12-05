@@ -59,14 +59,15 @@
 		<a href = "listBoard?pageNUM=${i }">${i}</a>&nbsp;&nbsp;
 	</c:forEach> --%>
 	<c:if test="${startPage > 5 }">
-			<a href = "listBoard?pageNUM=${startPage -1 }">이전</a>
+			<a href = "listBoard?pageNUM=${startPage -1 }">[이전]</a>
+			&nbsp;
 		</c:if>
 	<c:forEach var = "i" begin = "${startPage }" end = "${endPage }" >
 		<a href = "listBoard?pageNUM=${i }">${i}</a>&nbsp;&nbsp;
 	</c:forEach>
 	
 		<c:if test="${endPage < total }">
-			<a href = "listBoard?pageNUM=${endPage+1 }">다음</a>
+			&nbsp;<a href = "listBoard?pageNUM=${endPage+1 }">[다음]</a>
 		</c:if>
 </body>
 </html>
