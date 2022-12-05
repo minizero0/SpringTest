@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.example.demo.vo.BoardVO;
+import com.example.demo.vo.MemberVO;
 
 public class DBManager {
 	public static SqlSessionFactory sqlSessionFactory;
@@ -85,6 +86,26 @@ public class DBManager {
 		int re = 0;
 		SqlSession session = sqlSessionFactory.openSession();
 		re = session.selectOne("board.getTotal");
+		session.close();
+		return re;
+	}
+
+	public static int signUp(MemberVO m) {
+		int re = -1;
+		SqlSession session = sqlSessionFactory.openSession(true);
+		re = session.insert("member.signUp", m);
+		session.close();
+		return re;
+	}
+
+	public static int logIn(HashMap<String, Object> map) {
+		MemberVO m = null;
+		int re = 0;
+		SqlSession session = sqlSessionFactory.openSession();
+		m = session.selectOne("member.logIn", map);
+		if (m != null) {
+			re = 1;
+		}
 		session.close();
 		return re;
 	}

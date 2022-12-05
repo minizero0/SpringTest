@@ -32,6 +32,8 @@
 	<h2>게시물 목록</h2>
 	<hr>
 	<a href = "insertBoard">게시물 등록</a>
+	<a href = "signUp">회원가입</a>
+	<a href = "logIn">로그인</a>
 	<table border = "1" width = "80%">
 	<tr>
 		<td>글번호</td>
