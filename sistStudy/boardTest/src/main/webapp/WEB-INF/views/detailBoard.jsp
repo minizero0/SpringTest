@@ -11,6 +11,7 @@
 	<hr>
 	<a href = "insertBoard">등록</a>
 	<a href = "listBoard">목록</a>
+	<a href = "updateBoard?no=${b.no }">수정</a>
 	<br>	
 	글번호 : ${b.no }<br>
 	글제목 : ${b.title}<br>
@@ -21,7 +22,7 @@
 	조회수 : ${b.hit }<br>
 	등록일 : ${b.regdate }<br>
 	파일명 : ${b.fname }<br>
-	<hr>s	
+	<hr>
 
 </body>
 </html>
