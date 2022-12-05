@@ -7,7 +7,11 @@
 		update board set b_step = b_step + 1 where b_ref = #{b_ref} and b_step > #{b_step}
 	</update>
   <select id="findAll" resultType="BoardVO">
-    select * from board order by b_ref desc, b_step
+   select no,writer,pwd,title,content,regdate,hit,fname,b_ref,b_step,b_level
+from 
+(select rownum n, a.* from
+(select * from board order by b_ref desc, b_step) a)
+where n between #{start} and #{end}
   </select>
   <select id="getNextNo"  resultType="java.lang.Integer">
   	select nvl(max(no), 0)+1 from board

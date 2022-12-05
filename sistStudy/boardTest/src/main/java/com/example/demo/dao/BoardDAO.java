@@ -11,9 +11,9 @@ import com.example.demo.vo.BoardVO;
 @Repository
 public class BoardDAO {
 
-	public List<BoardVO> findAll() {
+	public List<BoardVO> findAll(HashMap<String, Object> map) {
 		// TODO Auto-generated method stub
-		return DBManager.findAll();
+		return DBManager.findAll(map);
 	}
 	
 	public int getNextNo() {
