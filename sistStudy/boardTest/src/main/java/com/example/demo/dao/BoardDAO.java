@@ -37,4 +37,12 @@ public class BoardDAO {
 		
 	}
 
+	public void updateStep(int b_ref, int b_step) {
+		DBManager.updateStep(b_ref,b_step);
+	}
+	
+	public int getTotal() {
+		return DBManager.getTotal();
+	}
+
 }

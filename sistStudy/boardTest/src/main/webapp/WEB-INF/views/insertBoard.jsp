@@ -8,6 +8,7 @@
 </head>
 <body>
 	<form action="insertBoard" method = "post" enctype="multipart/form-data">
+		<input type = "hidden" name = "no" value ="${no }">
 		글제목 : <input type = "text" name = "title"><br>
 		작성자 : <input type = "text" name = "writer"><br>
 		글암호 : <input type = "password" name = "pwd"><br>

@@ -12,7 +12,10 @@ import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
 public class BoardController {
-
+	private int totalPage = 1;
+	private int pageSIZE = 10; 
+	private int totalRecord = 0;
+	
 	@Autowired
 	private BoardDAO dao;
 
@@ -22,7 +25,12 @@ public class BoardController {
 	
 	@GetMapping("/listBoard")
 	public void listBoard(Model model) {
+		
+		totalRecord = dao.getTotal();
+		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
+		model.addAttribute("total", totalPage);
 		model.addAttribute("list", dao.findAll());
+		
 	}
 	
 	@GetMapping("/detailBoard")

@@ -70,4 +70,22 @@ public class DBManager {
 		session.close();
 		return re;
 	}
+
+	public static void updateStep(int b_ref, int b_step) {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("b_ref", b_ref);
+		map.put("b_step", b_step);
+		SqlSession session = sqlSessionFactory.openSession();
+		session.update("board.updateStep",map);
+		session.commit();
+		session.close();
+	}
+	
+	public static int getTotal() {
+		int re = 0;
+		SqlSession session = sqlSessionFactory.openSession();
+		re = session.selectOne("board.getTotal");
+		session.close();
+		return re;
+	}
 }

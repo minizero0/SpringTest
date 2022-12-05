@@ -32,7 +32,7 @@
 	<h2>게시물 목록</h2>
 	<hr>
 	<a href = "insertBoard">게시물 등록</a>
-	<table border = "1">
+	<table border = "1" width = "80%">
 	<tr>
 		<td>글번호</td>
 		<td>글제목</td>
@@ -42,11 +42,21 @@
 	<c:forEach var = "b" items = "${list }">
 	<tr class = "row" no = "${b.no }">
 		<td>${b.no}</td>
-		<td>${b.title}</td>
+		<td>
+			<c:if test="${b.b_level > 0}">
+				<c:forEach begin = "1" end = "${b.b_level }">
+					&nbsp;&nbsp;
+				</c:forEach>
+				<img src = "ball2.jpg" width = "20" height = "20"/>
+			</c:if>
+		${b.title}</td>
 		<td>${b.writer}</td>
 		<td>${b.regdate}</td>
 	</tr>
 	</c:forEach>
 	</table>
+	<c:forEach var = "i" begin = "1" end ="${total }">
+		<a>${i}&nbsp;&nbsp;</a>
+	</c:forEach>
 </body>
 </html>
