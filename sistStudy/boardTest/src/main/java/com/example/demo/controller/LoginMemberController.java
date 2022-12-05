@@ -11,6 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.demo.dao.MemberDAO;
 import com.example.demo.vo.MemberVO;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 @RequestMapping("logIn")
 public class LoginMemberController {
@@ -26,7 +28,7 @@ public class LoginMemberController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public ModelAndView submit(String id, String pwd) {
+	public ModelAndView submit(String id, String pwd,HttpSession session) {
 		ModelAndView mav = new ModelAndView("redirect:/listBoard");
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("id", id);
@@ -36,6 +38,8 @@ public class LoginMemberController {
 		if(re < 1) {
 			mav.addObject("msg", "로그인 실패");
 			mav.setViewName("error");
+		}else {
+			session.setAttribute("id", id);
 		}
 		
 		return mav;

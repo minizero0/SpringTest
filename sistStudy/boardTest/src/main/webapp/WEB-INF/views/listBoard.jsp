@@ -10,6 +10,9 @@
 	.high_light{
 		background: pink;
 	}
+	.Member{
+		display: none;	
+	}
 </style>
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
@@ -32,8 +35,19 @@
 	<h2>게시물 목록</h2>
 	<hr>
 	<a href = "insertBoard">게시물 등록</a>
-	<a href = "signUp">회원가입</a>
-	<a href = "logIn">로그인</a>
+	<a class = "noMember" href = "signUp">회원가입</a>
+	<a class = "noMember" href = "logIn">로그인</a>
+	<a class = "Member" href = "#">로그아웃</a>
+	<% String id = null; 
+	id = (String)session.getAttribute("id"); 
+	
+	if(id != null){
+		%>
+		
+		<%
+	}
+		
+	%>
 	<table border = "1" width = "80%">
 	<tr>
 		<td>글번호</td>
