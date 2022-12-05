@@ -6,6 +6,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+	.high_ligh{
+		background: pink;
+	}
+</style>
+<script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".row").hover(function(){
+			$(this).addClass("high_light");
+		}, function(){
+			$(this).removeClass("high_light");
+		});
+	})
+</script>
 </head>
 <body>
 	<h2>게시물 목록</h2>
@@ -19,7 +34,7 @@
 		<td>등록일</td>
 	</tr>
 	<c:forEach var = "b" items = "${list }">
-	<tr>
+	<tr class = "row" no= "${b.no }">
 		<td>${b.no}</td>
 		<td>${b.title}</td>
 		<td>${b.writer}</td>
