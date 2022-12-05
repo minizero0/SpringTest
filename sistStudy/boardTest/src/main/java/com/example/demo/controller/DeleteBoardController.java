@@ -50,9 +50,6 @@ public class DeleteBoardController {
 			mav.addObject("msg", "게시물 삭제에 실패하였습니다.");
 			mav.setViewName("error");
 		}
-		
 		return mav;
 	}
-	
-	
 }
