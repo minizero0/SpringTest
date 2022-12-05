@@ -41,7 +41,7 @@ public class DBManager {
 	public static int insert(BoardVO b) {
 		int re = -1;
 		SqlSession session = sqlSessionFactory.openSession(true);
-		re = session.selectOne("board.insert",b);
+		re = session.insert("board.insert",b);
 		session.close();
 		return re;
 	}

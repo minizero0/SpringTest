@@ -10,7 +10,7 @@
 <body>
 	<h2>게시물 목록</h2>
 	<hr>
-
+	<a href = "insertBoard">게시물 등록</a>
 	<table border = "1">
 	<tr>
 		<td>글번호</td>

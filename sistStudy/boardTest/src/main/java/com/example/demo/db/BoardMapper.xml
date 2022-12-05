@@ -6,13 +6,13 @@
   <select id="findAll" resultType="BoardVO">
     select * from board
   </select>
-  <select id="getNextNo" resultType = "java.lang.Integer">
+  <select id="getNextNo"  resultType="java.lang.Integer">
   	select nvl(max(no), 0)+1 from board
   </select>
   
   <insert id="insert" parameterType="BoardVO">
   	insert into board(no,writer,pwd,title,content,regdate,hit,fname,b_ref,b_step,b_level) 
-  	values(#{no},#{writer},#{pwd},#{title},#{content},#{sisdate},#{0},#{fname},#{b_ref},
+  	values(#{no},#{writer},#{pwd},#{title},#{content},sysdate,0,#{fname},#{b_ref},
   	#{b_step},#{b_level})
   </insert>
 </mapper>
