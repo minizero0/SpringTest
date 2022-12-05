@@ -12,7 +12,9 @@
  	<select id="findByNo" resultType="BoardVO">
  		select * from board where no =#{no}
  	</select>
-	  
+	<delete id = "delete">
+		delete board where no = #{no} and pwd = #{pwd}
+	</delete>  
   <insert id="insert" parameterType="BoardVO">
   	insert into board(no,writer,pwd,title,content,regdate,hit,fname,b_ref,b_step,b_level) 
   	values(#{no},#{writer},#{pwd},#{title},#{content},sysdate,0,#{fname},#{b_ref},

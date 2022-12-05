@@ -1,5 +1,6 @@
 package com.example.demo.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
@@ -31,8 +32,8 @@ public class BoardDAO {
 		return DBManager.update(b);
 	}
 
-	public int delete(int no) {
-		return DBManager.delete(no);
+	public int delete(HashMap<String, Object> map) {
+		return DBManager.delete(map);
 		
 	}
 

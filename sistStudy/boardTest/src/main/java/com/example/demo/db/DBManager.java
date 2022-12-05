@@ -1,6 +1,7 @@
 package com.example.demo.db;
 
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
@@ -62,10 +63,10 @@ public class DBManager {
 		return re;
 	}
 
-	public static int delete(int no) {
+	public static int delete(HashMap<String, Object> map) {
 		int re = -1;
 		SqlSession session = sqlSessionFactory.openSession(true);
-		re = session.update("board.delete",no);
+		re = session.update("board.delete",map);
 		session.close();
 		return re;
 	}
