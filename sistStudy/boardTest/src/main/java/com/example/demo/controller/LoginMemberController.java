@@ -39,7 +39,10 @@ public class LoginMemberController {
 			mav.addObject("msg", "로그인 실패");
 			mav.setViewName("error");
 		}else {
+			MemberVO m = dao.findById(id);
+			String name = m.getName();
 			session.setAttribute("id", id);
+			session.setAttribute("name", name);
 		}
 		
 		return mav;

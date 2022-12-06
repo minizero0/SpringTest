@@ -19,5 +19,10 @@ public class MemberDAO {
 		return DBManager.logIn(map);
 		
 	}
+
+	public MemberVO findById(String id) {
+		return DBManager.findById(id);
+		
+	}
 	
 }
