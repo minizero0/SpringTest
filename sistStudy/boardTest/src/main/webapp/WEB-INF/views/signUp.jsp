@@ -6,28 +6,30 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-	.signUp{
+	.signUp {
 		display: none;
 	}
 </style>
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	$(function(){
-		var emailCode;
+		var server_code;
 		$("#btnSend").click(function(){
 			var data = {email:$("#email").val()}
 			$.ajax({
 				url:"sendCode",
 				data:data,
-				success:function(code){
-					emailCode = code;
-					console.log(code);
+				success:function(data){
+					server_code = data;
+					console.log(server_code);
 				}
 			})
 		})
 		
 		$("#btnCheck").click(function(){
-			if(emailCode == $("#checkCode").val()){
+			if(server_code == $("#checkCode").val()){
+				alert("인증되었습니다.")
+				$("#email2").val($("#email").val())
 				$(".signUp").css("display","inline");
 			}else{
 				alert("잘못된 인증번호 입니다.")
@@ -45,7 +47,7 @@
 		아이디 : <input type = "text" name = "id"><br>
 		비밀번호 : <input type = "password" name = "pwd"><br>
 		이름 : <input type = "text" name = "name"><br>
-		이메일 : <input type = "email" name = "email"><br>
+		이메일 : <input type = "email" name = "email" id = "email2"><br>
 		<input type = "submit" value = "회원가입">
 		<input type = "reset" value = "취소">
 	</form>

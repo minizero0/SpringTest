@@ -45,6 +45,18 @@ public class MailController {
 		code += r.nextInt(10);
 		code += r.nextInt(10);
 		code += r.nextInt(10);
+		
+		SimpleMailMessage mailMessage = new SimpleMailMessage();
+		mailMessage.setFrom("dudals1069@gmail.com");
+		mailMessage.setTo(email);
+		mailMessage.setSubject("인증코드 전송");
+		mailMessage.setText(code);
+		try {
+			mailSender.send(mailMessage);
+		}catch (Exception e) {
+			System.out.println("메일에러:"+e.getMessage());
+		}
+		
 		return code;
 	}
 }
