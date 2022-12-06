@@ -30,19 +30,18 @@ public class LoginMemberController {
 	@RequestMapping(method = RequestMethod.POST)
 	public ModelAndView submit(String id, String pwd,HttpSession session) {
 		ModelAndView mav = new ModelAndView("redirect:/listBoard");
+		MemberVO m = null;
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("id", id);
 		map.put("pwd", pwd);
-		int re = dao.logIn(map);
+		m = dao.logIn(map);
 		
-		if(re < 1) {
+		if(m == null) {
 			mav.addObject("msg", "로그인 실패");
 			mav.setViewName("error");
 		}else {
-			MemberVO m = dao.findById(id);
 			String name = m.getName();
-			session.setAttribute("id", id);
-			session.setAttribute("name", name);
+			session.setAttribute("loginUser", m);
 		}
 		
 		return mav;

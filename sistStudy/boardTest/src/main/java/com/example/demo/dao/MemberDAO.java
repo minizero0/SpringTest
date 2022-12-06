@@ -15,14 +15,10 @@ public class MemberDAO {
 		return DBManager.signUp(m);
 	}
 
-	public int logIn(HashMap<String, Object> map) {
+	public MemberVO logIn(HashMap<String, Object> map) {
 		return DBManager.logIn(map);
 		
 	}
 
-	public MemberVO findById(String id) {
-		return DBManager.findById(id);
-		
-	}
 	
 }

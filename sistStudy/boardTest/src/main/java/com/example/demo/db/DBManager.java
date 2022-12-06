@@ -98,23 +98,12 @@ public class DBManager {
 		return re;
 	}
 
-	public static int logIn(HashMap<String, Object> map) {
+	public static MemberVO logIn(HashMap<String, Object> map) {
 		MemberVO m = null;
-		int re = 0;
 		SqlSession session = sqlSessionFactory.openSession();
 		m = session.selectOne("member.logIn", map);
-		if (m != null) {
-			re = 1;
-		}
-		session.close();
-		return re;
-	}
-
-	public static MemberVO findById(String id) {
-		MemberVO m = null;
-		SqlSession session = sqlSessionFactory.openSession();
-		m = session.selectOne("member.findById",id);
 		session.close();
 		return m;
 	}
+
 }

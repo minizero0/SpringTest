@@ -10,7 +10,7 @@
 	<form action="insertBoard" method = "post" enctype="multipart/form-data">
 		<input type = "hidden" name = "no" value ="${no }">
 		글제목 : <input type = "text" name = "title"><br>
-		작성자 : <input type = "text" name = "writer" value = "${name }"><br>
+		작성자 : <input type = "text" name = "writer" value = "${loginUser.name }"><br>
 		글암호 : <input type = "password" name = "pwd"><br>
 		글내용 : <br>
 		<textarea rows="10" cols="80" name="content"></textarea><br>
