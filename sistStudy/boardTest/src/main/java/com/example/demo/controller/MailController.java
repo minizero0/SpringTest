@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
@@ -31,5 +33,18 @@ public class MailController {
 			System.out.println("메일에러:"+e.getMessage());
 		}
 		return "OK";
+	}
+	
+	@RequestMapping("/sendCode")
+	@ResponseBody
+	public String sendCode(String email) {
+		System.out.println("email:"+email);
+		String code = "";
+		Random r = new Random();
+		code += r.nextInt(10);
+		code += r.nextInt(10);
+		code += r.nextInt(10);
+		code += r.nextInt(10);
+		return code;
 	}
 }
