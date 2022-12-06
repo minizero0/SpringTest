@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.demo.dao.BoardDAO;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 
 @Controller
@@ -29,7 +30,7 @@ public class BoardController {
 	
 	@GetMapping("/listBoard")
 	public void listBoard(Model model, 
-			@RequestParam(value = "pageNUM", defaultValue = "1") int pageNUM) {
+			@RequestParam(value = "pageNUM", defaultValue = "1") int pageNUM, HttpSession session) {
 		totalRecord = dao.getTotal();
 		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
 		int start = (pageNUM-1) * pageSIZE +1;
@@ -47,6 +48,7 @@ public class BoardController {
 		int endPage = startPage + pageGROUP -1;
 		model.addAttribute("startPage",startPage);
 		model.addAttribute("endPage",endPage);
+		model.addAttribute("loginUser", session.getAttribute("loginUser"));
 		
 	}
 	

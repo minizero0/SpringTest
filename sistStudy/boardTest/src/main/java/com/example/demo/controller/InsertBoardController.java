@@ -34,8 +34,7 @@ public class InsertBoardController {
 	public void form(@RequestParam(value = "no", defaultValue = "0") int no, Model model
 			, HttpSession session) {
 		model.addAttribute("no",no);
-		model.addAttribute("id", session.getAttribute("id"));
-		model.addAttribute("name", session.getAttribute("name"));
+		model.addAttribute("loginUser", session.getAttribute("loginUser"));
 		
 	}
 	
