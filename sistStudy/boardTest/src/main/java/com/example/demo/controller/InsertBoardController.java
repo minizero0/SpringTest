@@ -17,6 +17,7 @@ import com.example.demo.dao.BoardDAO;
 import com.example.demo.vo.BoardVO;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("insertBoard")
@@ -30,8 +31,12 @@ public class InsertBoardController {
 	}
 
 	@RequestMapping(method = RequestMethod.GET)
-	public void form(@RequestParam(value = "no", defaultValue = "0") int no, Model model) {
+	public void form(@RequestParam(value = "no", defaultValue = "0") int no, Model model
+			, HttpSession session) {
 		model.addAttribute("no",no);
+		model.addAttribute("id", session.getAttribute("id"));
+		model.addAttribute("name", session.getAttribute("name"));
+		
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
@@ -78,6 +83,8 @@ public class InsertBoardController {
 			mav.addObject("msg", "상품 수정에 실패");
 			mav.setViewName("error");
 		}
+		
+		
 		return mav;
 	}
 }
