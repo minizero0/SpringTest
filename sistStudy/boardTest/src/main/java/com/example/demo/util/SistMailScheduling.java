@@ -1,21 +1,23 @@
-package com.example.demo.controller;
+package com.example.demo.util;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import javax.tools.JavaFileManager.Location;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.EmpDAO;
 import com.example.demo.vo.EmpVO;
 
-import kr.co.youiwe.webservice.BitSms;
-
-@RestController
-public class EmpController {
+@Component
+@EnableScheduling
+public class SistMailScheduling {
 	
 	@Autowired
 	private MailSender mailSender;
@@ -31,9 +33,11 @@ public class EmpController {
 	public void setDao(EmpDAO dao) {
 		this.dao = dao;
 	}
-
-	@GetMapping("/sendMail")
-	public String mailSend() {
+	
+	
+	//초 분 시간 일 월 요일 연도
+	@Scheduled(cron = "0 41 12 * * ?")
+	public void pro() {
 		List<EmpVO> list = dao.findEmpAll();
 		for(EmpVO e : list) {
 			if(e.getEname().equals("조영민")) {
@@ -50,6 +54,6 @@ public class EmpController {
 				}
 			}
 		}
-		return "OK";
+		System.out.println("메일전송");
 	}
 }
