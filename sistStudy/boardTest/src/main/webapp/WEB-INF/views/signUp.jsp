@@ -40,14 +40,14 @@
 				to:$("#to").val()
 				}
 			console.log(data);
-			/* $.ajax({
-				url:"CheckMsg",
+			$.ajax({
+				url:"sendAuthCode",
 				data:data,
 				success:function(data){
 					server_code = data;		
 					$("#div_code").css("display", "block")
 				}
-			}) */
+			})
 		})
 		$("#btnCheck").click(function(){
 			if(server_code == $("#checkNum").val()){
