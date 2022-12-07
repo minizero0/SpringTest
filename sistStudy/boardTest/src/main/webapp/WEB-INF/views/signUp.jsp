@@ -46,6 +46,7 @@
 				success:function(data){
 					server_code = data;		
 					$("#div_code").css("display", "block")
+					printTimeLimit();
 				}
 			})
 		})
@@ -64,6 +65,21 @@
 			}
 		})
 		
+		function printTimeLimit(){
+			var limit = 180;
+			var limitId = setInterval(function(){
+				var mm = Number.parseInt(limit/60+"");
+				var sc = limit % 60;
+				$("#time_limit").html(mm+":"+sc);
+				limit--;
+				if(limit == 0){
+					clearInterval(limitId);
+					$("#div_code").css("display","none");
+					alert("제한시간초과")
+				}
+			}, 1000);
+		}
+		
 	})
 </script>
 </head>
@@ -77,6 +93,7 @@
 		<span id = "auth_type_text">전화번호</span> : <input type = "text" id = "to"><button id = "btnSend">인증번호 전송</button><br>
 		<div id = "div_code">	
 			인증번호 : <input type = "text" id = "checkNum"><button id = "btnCheck">인증번호 확인</button><br>
+			제한시간 : <span id = "time_limit"></span>
 		</div>
 		
 		<br>
