@@ -15,28 +15,21 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.demo.dao.EmpDAO;
 import com.example.demo.vo.EmpVO;
 
+import lombok.Setter;
+
 @Component
 @EnableScheduling
+@Setter
 public class SistMailScheduling {
 	
 	@Autowired
 	private MailSender mailSender;
-
-	public void setMailSender(MailSender mailSender) {
-		this.mailSender = mailSender;
-	}
 	
 	@Autowired
 	private EmpDAO dao;
 	
-
-	public void setDao(EmpDAO dao) {
-		this.dao = dao;
-	}
-	
-	
 	//초 분 시간 일 월 요일 연도
-	@Scheduled(cron = "0 41 12 * * ?")
+	@Scheduled(cron = "0 38 16 * * ?")
 	public void pro() {
 		List<EmpVO> list = dao.findEmpAll();
 		for(EmpVO e : list) {
@@ -46,7 +39,7 @@ public class SistMailScheduling {
 				mailMessage.setFrom("dudals1069@gmail.com");
 				mailMessage.setTo(e.getEmail());
 				mailMessage.setSubject("급여명세서");
-				mailMessage.setText(e.getEname() + "님의 올해 급여명세서 입니다.\n salary :" + e.getSalary() );
+				mailMessage.setText(e.getEname() + "님의 급여명세서 입니다.\n salary :" + e.getSalary() );
 				try {
 					mailSender.send(mailMessage);
 				}catch (Exception a) {

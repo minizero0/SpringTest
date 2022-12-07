@@ -9,23 +9,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kr.co.youiwe.webservice.BitSms;
+import lombok.Setter;
 
 @RestController
+@Setter
 public class AuthentificationController {
 	
 	@Autowired
 	private MailSender mailSender;
 	
-	public void setMailSender(MailSender mailSender) {
-		this.mailSender = mailSender;
-	}
-	
 	@Autowired
 	private BitSms sms;
-	public void setSms(BitSms sms) {
-		this.sms = sms;
-	}
-	
 
 	@GetMapping("/sendAuthCode")
 	public String auth(String auth_type, String to) {
