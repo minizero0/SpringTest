@@ -52,9 +52,12 @@
 		$("#btnCheck").click(function(){
 			if(server_code == $("#checkNum").val()){
 				alert("인증번호가 확인되었습니다.")
-				$("#phone").val($("#sendNum").val())
 				$(".signUp").css("display","inline");
-				
+				if(auth_type == "email"){
+					$("#email").val($("#to").val())
+				}else{
+					$("#phone").val($("#to").val())	
+				}
 			}else{
 				alert("인증번호가 잘못되었습니다.")
 			}
@@ -84,7 +87,7 @@
 		아이디 : <input type = "text" name = "id"><br>
 		비밀번호 : <input type = "password" name = "pwd"><br>
 		이름 : <input type = "text" name = "name"><br>
-		이메일 : <input type = "email" name = "email" id = "email2"><br>
+		이메일 : <input type = "email" name = "email" id = "email"><br>
 		전화번호 : <input type = "tel" name = "phone" id = "phone"><br>
 		<input type = "submit" value = "회원가입">
 		<input type = "reset" value = "취소">

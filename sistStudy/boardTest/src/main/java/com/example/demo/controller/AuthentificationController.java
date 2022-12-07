@@ -20,6 +20,12 @@ public class AuthentificationController {
 		this.mailSender = mailSender;
 	}
 	
+	@Autowired
+	private BitSms sms;
+	public void setSms(BitSms sms) {
+		this.sms = sms;
+	}
+	
 
 	@GetMapping("/sendAuthCode")
 	public String auth(String auth_type, String to) {
@@ -42,7 +48,6 @@ public class AuthentificationController {
 				System.out.println("메일에러:"+e.getMessage());
 			}
 		}else {
-			BitSms sms = new BitSms();
 			sms.sendMsg("01025598279", to, code);
 		}
 		return code;

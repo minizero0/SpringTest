@@ -6,8 +6,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
+import kr.co.youiwe.webservice.BitSms;
+
 @Configuration
 public class SpringConfig {
+	
+	@Bean
+	public BitSms sms() {
+		return new BitSms();
+	}
 	
 	@Bean
 	public JavaMailSenderImpl javaMailSender() {
