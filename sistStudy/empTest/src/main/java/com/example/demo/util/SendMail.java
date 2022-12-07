@@ -5,6 +5,7 @@ import java.util.List;
 import javax.mail.internet.MimeMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.mail.javamail.MimeMessagePreparator;
@@ -31,7 +32,7 @@ public class SendMail {
 	private EmpDAO dao;
 	
 	//초 분 시간 일 월 요일 연도
-	@Scheduled(cron = "0 37 17 * * ?")
+	@Scheduled(cron = "0 39 17 * * ?")
 	public String pro() {
 		List<EmpVO> list = dao.findAll();
 		for(EmpVO e : list) {
@@ -48,6 +49,7 @@ public class SendMail {
 						helper.setTo(e.getEmail());
 						helper.setSubject(e.getEname() + "님 급여명세서");
 						helper.setText(str, true);
+						helper.addAttachment("money.txt", new ClassPathResource("doc/money.txt"));
 					}
 				});
 				
