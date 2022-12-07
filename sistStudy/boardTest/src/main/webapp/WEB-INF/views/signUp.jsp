@@ -77,8 +77,8 @@
 <body>
 	<h2>회원가입</h2>
 	<hr>
-	<button id = "mail">메일</button>
-	<button id = "msg">문자</button>	
+	<input type = "radio" id = "msg">문자 인증
+	<input type = "radio" id = "mail">이메일 인증
 	<hr>
 	
 	<div id = "msgType">
