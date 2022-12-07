@@ -9,37 +9,47 @@
 	.signUp {
 		display: none;
 	}
-	#msgType, #mailType{
+	#div_code{
 		display: none;
 	}
 </style>
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	$(function(){
-		$("#mail").click(function(){
-			$("#mailType").css("display","inline");
-			$("#msgType").css("display","none");
-		})
+		var auth_type = "";
 		
 		$("#msg").click(function(){
-			$("#msgType").css("display","inline");
-			$("#mailType").css("display","none");
+			$("#auth_type_text").html("전화번호")
+			$("#to").attr("type","phone")
+			auth_type = "tel";
+		})
+		
+		$("#mail").click(function(){
+			$("#auth_type_text").html("이메일")
+			$("#to").attr("type","email")
+			auth_type = "email";
 		})
 		
 		
 		var server_code;
 		
-		$("#btnSendMsg").click(function(){
-			var data = {phone:$("#sendNum").val()}
-			$.ajax({
+		$("#btnSend").click(function(){
+			
+			var data = {
+				auth_type:auth_type,
+				to:$("#to").val()
+				}
+			console.log(data);
+			/* $.ajax({
 				url:"CheckMsg",
 				data:data,
 				success:function(data){
 					server_code = data;		
+					$("#div_code").css("display", "block")
 				}
-			})
+			}) */
 		})
-		$("#btnCheckMsg").click(function(){
+		$("#btnCheck").click(function(){
 			if(server_code == $("#checkNum").val()){
 				alert("인증번호가 확인되었습니다.")
 				$("#phone").val($("#sendNum").val())
@@ -50,46 +60,26 @@
 			}
 		})
 		
-		$("#btnSendMail").click(function(){
-			var data = {email:$("#email").val()}
-			$.ajax({
-				url:"sendCode",
-				data:data,
-				success:function(data){
-					server_code = data;
-					console.log(server_code);
-				}
-			})
-		})
-		
-		$("#btnCheckMail").click(function(){
-			if(server_code == $("#checkCode").val()){
-				alert("인증되었습니다.")
-				$("#email2").val($("#email").val())
-				$(".signUp").css("display","inline");
-			}else{
-				alert("잘못된 인증번호 입니다.")
-			}
-		})
 	})
 </script>
 </head>
 <body>
 	<h2>회원가입</h2>
 	<hr>
-	<input type = "radio" id = "msg">문자 인증
-	<input type = "radio" id = "mail">이메일 인증
+	<input type = "radio" id = "msg" name = "auth">문자 인증
+	<input type = "radio" id = "mail" name = "auth">이메일 인증
 	<hr>
 	
-	<div id = "msgType">
-		전화번호 : <input type = "tel" id = "sendNum"><button id = "btnSendMsg">인증번호 전송</button><br>
-		인증번호 : <input type = "text" id = "checkNum"><button id = "btnCheckMsg">인증번호 확인</button><br>
+	
+		<span id = "auth_type_text">전화번호</span> : <input type = "text" id = "to"><button id = "btnSend">인증번호 전송</button><br>
+	<div id = "div_code">	
+		인증번호 : <input type = "text" id = "checkNum"><button id = "btnCheck">인증번호 확인</button><br>
 	</div>
 	
-	<div id = "mailType">
-		이메일 : <input type = "email" id = "email"><button id ="btnSendMail">코드 전송</button><br>
-		인증코드 : <input type = "text" id = "checkCode"><button id = "btnCheckMail">인증확인</button><br>
-	</div>
+	<br>
+	<br>
+	<br>
+	<br>
 	<form action="signUp" method = "post" class = "signUp">
 		아이디 : <input type = "text" name = "id"><br>
 		비밀번호 : <input type = "password" name = "pwd"><br>
