@@ -58,6 +58,7 @@
 				}else{
 					$("#phone").val($("#to").val())	
 				}
+				$("#auth_main").css("display","none")
 			}else{
 				alert("인증번호가 잘못되었습니다.")
 			}
@@ -69,20 +70,20 @@
 <body>
 	<h2>회원가입</h2>
 	<hr>
-	<input type = "radio" id = "msg" name = "auth">문자 인증
-	<input type = "radio" id = "mail" name = "auth">이메일 인증
-	<hr>
-	
-	
+	<div id = "auth_main">
+		<input type = "radio" id = "msg" name = "auth">문자 인증
+		<input type = "radio" id = "mail" name = "auth">이메일 인증
+		<hr>
 		<span id = "auth_type_text">전화번호</span> : <input type = "text" id = "to"><button id = "btnSend">인증번호 전송</button><br>
-	<div id = "div_code">	
-		인증번호 : <input type = "text" id = "checkNum"><button id = "btnCheck">인증번호 확인</button><br>
+		<div id = "div_code">	
+			인증번호 : <input type = "text" id = "checkNum"><button id = "btnCheck">인증번호 확인</button><br>
+		</div>
+		
+		<br>
+		<br>
+		<br>
+		<br>
 	</div>
-	
-	<br>
-	<br>
-	<br>
-	<br>
 	<form action="signUp" method = "post" class = "signUp">
 		아이디 : <input type = "text" name = "id"><br>
 		비밀번호 : <input type = "password" name = "pwd"><br>
