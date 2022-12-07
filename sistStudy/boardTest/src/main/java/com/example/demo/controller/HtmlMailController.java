@@ -28,7 +28,7 @@ public class HtmlMailController {
 			public void prepare(MimeMessage mimeMessage) throws Exception {
 				String str = "<h2>회원가입 성공</h2>";
 				str += "<img src ='cid:ball'/>";
-				MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
+				MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8"); 
 				helper.setFrom("dudals1069@gmail.com");
 				helper.setTo("ehwjrdufvnd@naver.com");
 				helper.setSubject("html형태의 이메일");
