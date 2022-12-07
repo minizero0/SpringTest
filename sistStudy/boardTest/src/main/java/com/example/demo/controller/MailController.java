@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -18,7 +19,8 @@ public class MailController {
 	public void setMailSender(MailSender mailSender) {
 		this.mailSender = mailSender;
 	}
-
+	
+	
 	@RequestMapping("/mail")
 	@ResponseBody
 	public String mail() {
