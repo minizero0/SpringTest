@@ -32,7 +32,7 @@ public class SendMail {
 	private EmpDAO dao;
 	
 	//초 분 시간 일 월 요일 연도
-	@Scheduled(cron = "0 39 17 * * ?")
+	@Scheduled(cron = "0 51 17 * * ?")
 	public String pro() {
 		List<EmpVO> list = dao.findAll();
 		for(EmpVO e : list) {
@@ -52,7 +52,6 @@ public class SendMail {
 						helper.addAttachment("money.txt", new ClassPathResource("doc/money.txt"));
 					}
 				});
-				
 			}
 		}
 		return "OK";	
