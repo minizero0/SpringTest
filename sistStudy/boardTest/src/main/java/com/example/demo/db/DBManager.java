@@ -1,6 +1,7 @@
 package com.example.demo.db;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -10,6 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.example.demo.vo.BoardVO;
+import com.example.demo.vo.EmpVO;
 import com.example.demo.vo.MemberVO;
 
 public class DBManager {
@@ -104,6 +106,13 @@ public class DBManager {
 		m = session.selectOne("member.logIn", map);
 		session.close();
 		return m;
+	}
+
+	public static List<EmpVO> findEmpAll() {
+		SqlSession session = sqlSessionFactory.openSession();
+		List<EmpVO> list = session.selectList("emp.findAll");
+		session.close();
+		return list;
 	}
 
 }
