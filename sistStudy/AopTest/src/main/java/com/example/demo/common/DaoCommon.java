@@ -2,7 +2,9 @@ package com.example.demo.common;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -16,12 +18,19 @@ public class DaoCommon {
 	@Pointcut("execution(public * com.example.demo.dao..*(..))")
 	public void daoCommon() {}
 	
-	@AfterReturning("daoCommon()")
-	public void afterReturning(JoinPoint joinPoint) {
+	@After("daoCommon()")
+	public void afterTrowing(JoinPoint joinPoint) {
 		String methodName = joinPoint.getSignature().getName();
-		System.out.println();
-		System.out.println("타깃 메소드("+methodName+")가 정상 완료");
+		System.out.println("종료"+methodName);
 	}
+	
+	
+//	@AfterReturning("daoCommon()")
+//	public void afterReturning(JoinPoint joinPoint) {
+//		String methodName = joinPoint.getSignature().getName();
+//		System.out.println();
+//		System.out.println("타깃 메소드("+methodName+")가 정상 완료");
+//	}
 	
 	
 //	@Around("daoCommon()")
