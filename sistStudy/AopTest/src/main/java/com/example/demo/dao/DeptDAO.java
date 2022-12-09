@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.db.DBManager;
 import com.example.demo.vo.DeptVO;
 
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.Setter;
 
 @Repository

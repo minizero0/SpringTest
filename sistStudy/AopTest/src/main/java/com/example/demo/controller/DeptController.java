@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.dao.DeptDAO;
 import com.example.demo.vo.DeptVO;
 
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.Setter;
 
 @RestController
