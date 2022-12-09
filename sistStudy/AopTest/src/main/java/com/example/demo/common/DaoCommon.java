@@ -2,6 +2,7 @@ package com.example.demo.common;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -15,20 +16,31 @@ public class DaoCommon {
 	@Pointcut("execution(public * com.example.demo.dao..*(..))")
 	public void daoCommon() {}
 	
-	@Around("daoCommon()")
-	public Object around(ProceedingJoinPoint joinPoint) {
-		Object obj = null;
+	@AfterReturning("daoCommon()")
+	public void afterReturning(JoinPoint joinPoint) {
 		String methodName = joinPoint.getSignature().getName();
-		System.out.println(methodName+"가 동작하기 전입니다.");
-		try {
-			obj = joinPoint.proceed();
-		}catch (Throwable e) {
-			e.printStackTrace();
-		}
-		
-		System.out.println(methodName+"가 완료되었습니다.");
-		return obj;
+		System.out.println();
+		System.out.println("타깃 메소드("+methodName+")가 정상 완료");
 	}
+	
+	
+//	@Around("daoCommon()")
+//	public Object around(ProceedingJoinPoint joinPoint) {
+//		Object obj = null;
+//		String methodName = joinPoint.getSignature().getName();
+//		System.out.println(methodName+"가 동작하기 전입니다.");
+//		long start = System.currentTimeMillis();
+//		try {
+//			obj = joinPoint.proceed();
+//		}catch (Throwable e) {
+//			e.printStackTrace();
+//		}
+//		
+//		long end = System.currentTimeMillis();
+//		System.out.println(methodName+"가 완료되었습니다.");
+//		System.out.println("걸린시간:"+(end-start));
+//		return obj;
+//	}
 	
 	
 	/*
