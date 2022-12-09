@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="log">
+
+	<select id="nextNo" resultType="java.lang.Integer">
+		select nvl(max(no),0)+1 from log
+	</select>
+  
+  <insert id="insert" parameterType="logVO">
+  	insert into log(no,log) values(#{no},#{log})
+  </insert>
+  
+</mapper>

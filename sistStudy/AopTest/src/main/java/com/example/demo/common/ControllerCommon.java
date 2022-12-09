@@ -3,18 +3,27 @@ package com.example.demo.common;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.util.Date;
+import java.util.HashMap;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.example.demo.dao.LogDAO;
+
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.Setter;
 
 @Component
 @Aspect
+@Setter
 public class ControllerCommon {
+	
+	@Autowired
+	private LogDAO dao;
 	
 	@Pointcut("execution(public * com.example.demo.controller..*(..))")
 	public void commonController() {}; 
@@ -54,7 +63,16 @@ public class ControllerCommon {
 			fw.close();
 		} catch (Exception e) {
 	            e.getStackTrace();
-		}		
+		}
+		int no = dao.nextNo();
+		
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("no", no);
+		map.put("log", line);
+		
+		dao.insert(map);
+		
+		
 		return ret;
 	}
 }

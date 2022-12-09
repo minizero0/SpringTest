@@ -1,6 +1,7 @@
 package com.example.demo.db;
 
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
@@ -56,6 +57,19 @@ public class DBManager {
 		re = session.delete("dept.delete",dno);
 		session.commit();
 		session.close();
+		return re;
+	}
+
+	public static int insertLog(HashMap<String, Object> map) {
+		int re = -1;
+		SqlSession session = sqlSessionFactory.openSession(true);
+		re = session.insert("log.insert",map);
+		return re;
+	}
+
+	public static int nextNo() {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int re = session.selectOne("log.nextNo");
 		return re;
 	}
 	
