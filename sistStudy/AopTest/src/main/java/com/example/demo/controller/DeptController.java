@@ -22,25 +22,25 @@ public class DeptController {
 	private DeptDAO dao;
 	
 	@RequestMapping("/listDept")	
-	public List<DeptVO> listDept(){
+	public List<DeptVO> listDept(HttpServletRequest request){
 		return dao.findAll();
 	}
 	
 	
 	@RequestMapping("/insertDept")
-	public String insert(DeptVO d) {
+	public String insert(HttpServletRequest request,DeptVO d) {
 		int re= dao.insert(d);
 		return ""+re;
 	}
 	
 	@RequestMapping("/updateDept")	
-	public String update(DeptVO d) {
+	public String update(HttpServletRequest request,DeptVO d) {
 		int re= dao.update(d);
 		return ""+re;
 	}
 	
 	@RequestMapping("/deleteDept")
-	public String delete(int dno) {
+	public String delete(HttpServletRequest request,int dno) {
 		int re = dao.delete(dno);
 		return ""+re;
 	}

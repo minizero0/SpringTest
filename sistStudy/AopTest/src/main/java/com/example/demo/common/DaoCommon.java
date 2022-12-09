@@ -25,17 +25,17 @@ public class DaoCommon {
 	@Pointcut("execution(public * com.example.demo.dao..*(..))")
 	public void daoCommon() {}
 	
-	@Before("daoCommon()")
-	public void around(JoinPoint joinPoint){
-		long start = System.currentTimeMillis();
-		HttpServletRequest request = 
-		        ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
-		
-		String ip = request.getRemoteAddr();
-		long end = System.currentTimeMillis();
-		
-		System.out.println("ip주소"+ip+"걸린시간:"+(end-start));
-	}
+//	@Before("daoCommon()")
+//	public void around(JoinPoint joinPoint){
+//		long start = System.currentTimeMillis();
+//		HttpServletRequest request = 
+//		        ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
+//		
+//		String ip = request.getRemoteAddr();
+//		long end = System.currentTimeMillis();
+//		
+//		System.out.println("ip주소"+ip+"걸린시간:"+(end-start));
+//	}
 	
 //	@AfterReturning(pointcut = "daoCommon()", returning = "ret")
 //	public void afterReturnning(JoinPoint joinPoint, Object ret) {

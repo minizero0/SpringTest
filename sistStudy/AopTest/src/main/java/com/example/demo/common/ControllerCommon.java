@@ -1,10 +1,13 @@
 package com.example.demo.common;
 
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.util.Date;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -12,11 +15,16 @@ import jakarta.servlet.http.HttpServletRequest;
 @Component
 @Aspect
 public class ControllerCommon {
-
-	@Around("execution(public * com.example.demo.dao..*(..))")
+	
+	@Pointcut("execution(public * com.example.demo.controller..*(..))")
+	public void commonController() {}; 
+	
+	
+	@Around("execution(public * com.example.demo.controller..*(..))")
 	public Object pro(ProceedingJoinPoint joinPoint) {
 		Object []args = joinPoint.getArgs();
 		HttpServletRequest request = (HttpServletRequest)args[0];
+		String uri = request.getRequestURI();
 		String ip = request.getRemoteAddr();
 		Date today = new Date();
 		int year = today.getYear()+1900;
@@ -37,6 +45,16 @@ public class ControllerCommon {
 		}
 		long end = System.currentTimeMillis();
 		
+		String line = uri+"/"+ip+"/"+(end-start)+"/"+time;
+		System.out.println(uri+"/"+ip+"/"+(end-start)+"/"+time);
+		
+		try {
+			FileWriter fw = new FileWriter("/Users/mini0/Desktop/sist/log.txt", true);
+			fw.write(line);
+			fw.close();
+		} catch (Exception e) {
+	            e.getStackTrace();
+		}		
 		return ret;
 	}
 }
