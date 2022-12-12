@@ -29,4 +29,12 @@ public class DBManager {
 		session.close();
 		return re;
 	}
+	
+	public static MemberVO findById(String id) {
+		MemberVO m = null;
+		SqlSession session = sqlSessionFactory.openSession();
+		m = session.selectOne("member.findById", id);
+		session.close();
+		return m;
+	}
 }

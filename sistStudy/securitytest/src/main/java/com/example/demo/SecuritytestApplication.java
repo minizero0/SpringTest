@@ -11,8 +11,8 @@ import com.example.demo.vo.MemberVO;
 public class SecuritytestApplication {
 
 	public static void main(String[] args) {
-		DBManager.insert(new MemberVO("tiger",PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("tiger"),"홍길동","user"));
-		DBManager.insert(new MemberVO("master",PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("1234"),"김유신","admin"));
+//		DBManager.insert(new MemberVO("tiger",PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("tiger"),"홍길동","user"));
+//		DBManager.insert(new MemberVO("master",PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("1234"),"김유신","admin"));
 		SpringApplication.run(SecuritytestApplication.class, args);
 	}
 

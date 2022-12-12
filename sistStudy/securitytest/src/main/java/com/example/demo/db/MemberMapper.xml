@@ -7,7 +7,7 @@
 		insert into member(id,pwd,name,role) values(#{id}, #{pwd}, #{name}, #{role})
 	</insert>
 
-	<select id="findAll" resultType="memberVO">
-    	select * from member
+	<select id="findById" resultType="memberVO">
+    	select * from member where id = #{id}
     </select>
 </mapper>
