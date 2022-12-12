@@ -1,4 +1,6 @@
 INDEX VERSION 1.131
+/Users/mini0/SsangYong/SpringTest/sistStudy/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3012639500.index
+/securitytest/src/main/java
 /Users/mini0/SsangYong/SpringTest/sistStudy/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/362392161.index
 /bookTest/src/main/java
 /Users/mini0/SsangYong/SpringTest/sistStudy/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3833553736.index
