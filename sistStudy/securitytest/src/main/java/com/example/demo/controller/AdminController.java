@@ -1,18 +1,17 @@
 package com.example.demo.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class AdminController {
 
 	@GetMapping("/admin/menu1")
-	public String admin1() {
-		return "관리자 메뉴1";
+	public void admin1() {
 	}
 	
 	@GetMapping("/admin/menu2")
-	public String admin2() {
-		return "관리자 메뉴2";
+	public void admin2() {
 	}
 }
