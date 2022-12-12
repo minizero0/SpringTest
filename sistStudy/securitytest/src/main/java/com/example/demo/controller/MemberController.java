@@ -2,18 +2,49 @@ package com.example.demo.controller;
 
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.example.demo.dao.MemberDAO;
+import com.example.demo.vo.MemberVO;
 
 @Controller
 public class MemberController {
-
+	@Autowired
+	private MemberDAO dao;
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	
+	
 	@GetMapping("/login")
 	public void login() {
+	}
+	
+	@GetMapping("/join")
+	public void join() {
+	}
+	
+	@PostMapping("/join")
+	public ModelAndView joinSubmit(MemberVO m) {
+		ModelAndView mav = new ModelAndView("redirect:/login");
+		m.setPwd(passwordEncoder.encode(m.getPwd()));
+		int re = -1;
+		re = dao.insert(m);
+		if(re != 1) {
+			mav.setViewName("/all/error");
+			mav.addObject("msg","회원가입에 실패하였습니다.");
+		}
+		return mav;
+		
 	}
 	
 	@GetMapping("/service1")

@@ -8,5 +8,8 @@
 </head>
 <body>
 	<h1>index</h1>
+	<hr>
+	<a href = "/login">로그인</a>
+	<a href = "/join">회원가입</a>
 </body>
 </html>
