@@ -18,8 +18,6 @@ import lombok.Setter;
 @Setter
 public class HelloController {
 
-	@Autowired
-	private DeptDAO dao;
 
 	@RequestMapping("/hello")
 	public void hello(Model model) {
@@ -33,9 +31,4 @@ public class HelloController {
 		model.addAttribute("list",list);
 	}
 	
-	@RequestMapping("/deptList")
-	public void list(Model model) {
-		List<DeptVO> list = dao.findAll();
-		model.addAttribute("list", list);
-	}
 }
