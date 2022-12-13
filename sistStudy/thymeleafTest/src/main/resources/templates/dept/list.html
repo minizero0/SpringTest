@@ -7,11 +7,16 @@
 <body>
 	<h2>부서목록</h2>
 	<hr>
-	
-	<ul>
-		<li th:each="m:${list}">
-			<span th:text={m.dname}></span>
-		</li>
-	</ul>
+	<table border="1" width="60%">
+		<tr>
+			<td>부서명</td>
+		</tr>
+		
+		<tr th:each="d:${list}">
+			<td>
+				<a th:href="@{'/dept/detail/'+${d.dno}}" th:text="${d.dname}"></a>
+			</td>
+		</tr>
+	</table>
 </body>
 </html>

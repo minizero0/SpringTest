@@ -14,4 +14,9 @@ public class DeptDAO {
 	public List<DeptVO> findAll(){
 		return DBManager.findAll();
 	}
+
+	public DeptVO findByNo(int dno) {
+		// TODO Auto-generated method stub
+		return DBManager.findByNo(dno);
+	}
 }

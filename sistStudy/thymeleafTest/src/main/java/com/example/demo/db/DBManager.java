@@ -31,5 +31,12 @@ public class DBManager {
 		return list;
 		
 	}
+
+	public static DeptVO findByNo(int dno) {
+		SqlSession session = sqlSessionFactory.openSession();
+		DeptVO d = session.selectOne("dept.findById", dno);
+		session.close();
+		return d;
+	}
 	
 }
