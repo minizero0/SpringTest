@@ -16,6 +16,7 @@ public class SecurityConfig {
 		.authorizeRequests()
 		.requestMatchers("/").permitAll()
 		.anyRequest().authenticated();
+		
 		return http.build();
 	}
 }
