@@ -9702,3 +9702,112 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact javax.xml:jax
 2022-12-13 03:14:18,900 [Worker-355: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-12-13 03:14:18,900 [Worker-355: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-12-13 03:14:18,901 [Worker-355: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest/src/test/resources
+2022-12-13 09:03:58,140 [Worker-377: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.example:securitytest:0.0.1-SNAPSHOT @ /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest2/pom.xml.
+2022-12-13 09:03:58,860 [Worker-377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-13 09:03:58,860 [Worker-377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-13 09:03:58,860 [Worker-377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-13 09:03:58,861 [Worker-377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-12-13 09:03:58,862 [Worker-377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-13 09:03:58,862 [Worker-377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-13 09:03:58,862 [Worker-377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest2/src/test/resources
+2022-12-13 09:04:00,160 [Worker-380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-13 09:04:00,160 [Worker-380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-13 09:04:00,161 [Worker-380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-13 09:04:00,162 [Worker-380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-12-13 09:04:00,165 [Worker-380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-13 09:04:00,166 [Worker-380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-13 09:04:00,166 [Worker-380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest2/src/test/resources
+2022-12-13 09:05:44,913 [Worker-383: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.example:securitytest3:0.0.1-SNAPSHOT @ /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/pom.xml.
+2022-12-13 09:05:45,445 [Worker-383: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /securitytest3/src/main/java
+2022-12-13 09:05:45,445 [Worker-383: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /securitytest3/src/main/resources
+2022-12-13 09:05:45,446 [Worker-383: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /securitytest3/src/main/resources
+2022-12-13 09:05:45,447 [Worker-383: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /securitytest3/src/test/java
+2022-12-13 09:05:45,834 [Worker-383: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2022-12-13 09:05:45,835 [Worker-383: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2022-12-13 09:05:45,931 [Worker-383: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.example:securitytest3:0.0.1-SNAPSHOT @ /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/pom.xml.
+2022-12-13 09:05:46,772 [Worker-383: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /securitytest3/src/main/java
+2022-12-13 09:05:46,773 [Worker-383: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /securitytest3/src/main/resources
+2022-12-13 09:05:46,773 [Worker-383: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /securitytest3/src/main/resources
+2022-12-13 09:05:46,773 [Worker-383: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /securitytest3/src/test/java
+2022-12-13 09:05:47,001 [Worker-383: Import Getting Started Content] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for securitytest3
+2022-12-13 09:05:47,003 [Worker-383: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2022-12-13 09:05:47,341 [Worker-379: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:05:47,342 [Worker-379: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:05:47,343 [Worker-379: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:05:47,343 [Worker-379: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of securitytest3
+2022-12-13 09:05:47,343 [Worker-379: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for securitytest3
+2022-12-13 09:07:15,851 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:07:15,866 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:07:15,870 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:10:29,984 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:10:30,080 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:10:30,087 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:10:59,935 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:10:59,972 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:10:59,975 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:11:26,000 [Worker-390: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:11:26,042 [Worker-390: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:11:26,044 [Worker-390: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:12:27,827 [Worker-387: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.example:securitytest3:0.0.1-SNAPSHOT @ /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/pom.xml.
+2022-12-13 09:12:28,318 [Worker-387: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:12:28,318 [Worker-387: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:12:28,321 [Worker-387: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:12:28,323 [Worker-387: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of securitytest3
+2022-12-13 09:12:28,323 [Worker-387: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for securitytest3
+2022-12-13 09:12:29,677 [Worker-387: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:12:29,678 [Worker-387: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:12:29,681 [Worker-387: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:12:48,047 [Worker-386: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:12:48,047 [Worker-386: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:12:48,052 [Worker-386: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:13:13,392 [Worker-389: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:13:13,394 [Worker-389: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:13:13,397 [Worker-389: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:13:23,344 [Worker-386: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:13:23,345 [Worker-386: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:13:23,348 [Worker-386: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:13:25,931 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:13:25,931 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:13:25,933 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:13:28,942 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:13:28,942 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:13:28,945 [Worker-381: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:13:33,844 [Worker-387: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:13:33,844 [Worker-387: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:13:33,848 [Worker-387: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:13:37,118 [Worker-387: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:13:37,118 [Worker-387: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:13:37,123 [Worker-387: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:15:33,719 [Worker-391: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:15:33,931 [Worker-391: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:15:33,937 [Worker-391: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:17:42,660 [Worker-395: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:17:42,686 [Worker-395: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:17:42,688 [Worker-395: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:18:04,539 [Worker-386: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:18:04,561 [Worker-386: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:18:04,562 [Worker-386: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:19:34,000 [Worker-396: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:19:34,090 [Worker-396: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:19:34,097 [Worker-396: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:20:16,664 [Worker-386: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:20:16,679 [Worker-386: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:20:16,682 [Worker-386: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:20:18,748 [Worker-394: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:20:18,775 [Worker-394: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:20:18,777 [Worker-394: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:21:24,986 [Worker-393: Launching securitytest3 - Securitytest3Application] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:21:24,995 [Worker-393: Launching securitytest3 - Securitytest3Application] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:21:24,999 [Worker-393: Launching securitytest3 - Securitytest3Application] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:23:26,068 [Worker-400: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:23:26,088 [Worker-400: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:23:26,091 [Worker-400: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:23:35,745 [Worker-398: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:23:35,798 [Worker-398: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:23:35,800 [Worker-398: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:23:49,940 [Worker-401: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:23:49,968 [Worker-401: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:23:49,972 [Worker-401: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
+2022-12-13 09:25:53,379 [Worker-388: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-13 09:25:53,446 [Worker-388: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-13 09:25:53,452 [Worker-388: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/securitytest3/src/test/resources
