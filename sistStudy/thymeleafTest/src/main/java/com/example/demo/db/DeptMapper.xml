@@ -9,4 +9,7 @@
 	<select id="findById" resultType="deptVO">
 		select * from dept where dno = #{dno}
 	</select>
+	<delete id="delete">
+		delete dept where dno = #{dno}
+	</delete>
 </mapper>

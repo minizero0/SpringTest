@@ -12,5 +12,8 @@
 	부서이름 : <p th:text="${d.dname}"/><br>
 	부서위치 : <p th:text="${d.dloc}"/><br>
 	
+	<a th:href="@{'/dept/delete/'+${d.dno}}">삭제</a>
+	<a th:href="@{'/dept/update/'+${d.dno}}">수정</a>
+	
 </body>
 </html>

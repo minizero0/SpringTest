@@ -38,5 +38,12 @@ public class DBManager {
 		session.close();
 		return d;
 	}
+
+	public static int delete(int dno) {
+		int re = -1;
+		SqlSession session = sqlSessionFactory.openSession(true);
+		re = session.delete("dept.delete",dno);
+		return re;
+	}
 	
 }

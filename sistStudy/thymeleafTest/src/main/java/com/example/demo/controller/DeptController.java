@@ -35,4 +35,21 @@ public class DeptController {
 		mav.addObject("d", d);
 		return mav;
 	}
+	
+	@GetMapping("/dept/delete/{dno}")
+	public ModelAndView delete(@PathVariable int dno) {
+		int re = dao.delete(dno);
+		ModelAndView mav = new ModelAndView("redirect:/dept/list");
+		return mav;
+	}
+	
+	@GetMapping("/dept/update/{dno}")
+	public ModelAndView update(@PathVariable int dno) {
+		ModelAndView mav = new ModelAndView("/dept/update");
+		DeptVO d = dao.findByNo(dno);
+		mav.addObject("d",d);
+		return mav;
+		
+	}
+	
 }

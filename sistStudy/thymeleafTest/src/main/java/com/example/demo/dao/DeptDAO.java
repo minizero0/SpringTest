@@ -19,4 +19,10 @@ public class DeptDAO {
 		// TODO Auto-generated method stub
 		return DBManager.findByNo(dno);
 	}
+
+	public int delete(int dno) {
+		// TODO Auto-generated method stub
+		return DBManager.delete(dno);
+		
+	}
 }
