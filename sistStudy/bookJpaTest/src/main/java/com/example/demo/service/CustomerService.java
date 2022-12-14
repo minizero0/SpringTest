@@ -22,6 +22,16 @@ public class CustomerService {
 		return dao.findAll();
 	}
 	
-	public 
+	public void save(CustomerVO c) {
+		dao.save(c);
+	}
+	
+	public CustomerVO getOne(int custid) {
+		return dao.getOne(custid);
+	}
+
+	public void delete(int custid) {
+		dao.deleteById(custid);
+	}
 
 }

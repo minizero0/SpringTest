@@ -36,10 +36,10 @@
 			<td th:text="${c.address}"></td>
 			<td th:text="${c.phone}"></td>
 			<td>
-				<a th:href="@{'/goods/update/'+${g.no}}" th:text="수정"></a>
+				<a th:href="@{'/customer/update/'+${c.custid}}" th:text="수정"></a>
 			</td>
 			<td>
-				<a th:href="@{'/goods/delete/'+${g.no}}" id ="delete" th:text="삭제"></a>
+				<a th:href="@{'/customer/delete/'+${c.custid}}" id ="delete" th:text="삭제"></a>
 			</td>
 		</tr>
 	</table>
