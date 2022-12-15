@@ -1,13 +1,17 @@
 package com.example.demo.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.View_ListOrdersDAO;
+import com.example.demo.dao.View_ListOrdersDAO2;
 import com.example.demo.service.BookService;
 import com.example.demo.service.CustomerService;
 import com.example.demo.service.OrdersService;
@@ -29,15 +33,23 @@ public class OrdersController {
 	@Autowired
 	private View_ListOrdersDAO view_ListOrdersDAO;
 	
+	@Autowired
+	private View_ListOrdersDAO2 view_ListOrdersDAO2;
+	
 	@GetMapping("/orders/list")
 	public void list(Model model) {
 		System.out.println(os.findAll());
 		model.addAttribute("list", os.findAll());
 	}
 	
-	@GetMapping("/orders/list2")
-	public void list2(Model model) {
-		model.addAttribute("list", view_ListOrdersDAO.findAll());
+	@RequestMapping("/orders/list2")
+	public void list2(Model model, String name, HttpServletRequest request) {
+		if(request.getMethod().equals("GET")) {
+			model.addAttribute("list", view_ListOrdersDAO.findAll());
+		}else {
+			model.addAttribute("list", view_ListOrdersDAO.findByNameContaining(name));
+		}
+		
 	}
 	
 	@GetMapping("/orders/insert")
@@ -54,6 +66,11 @@ public class OrdersController {
 		os.insert(o);
 		ModelAndView mav = new ModelAndView("redirect:/orders/list");
 		return mav;
+	}
+	
+	@GetMapping("/orders/list3")
+	public void list3(Model model) {
+		model.addAttribute("list", view_ListOrdersDAO2.findAll());
 	}
 	
 }
