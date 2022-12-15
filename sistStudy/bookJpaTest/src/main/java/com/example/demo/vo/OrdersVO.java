@@ -21,7 +21,7 @@ public class OrdersVO {
 	private CustomerVO customerVO;
 	
 	@ManyToOne
-	@JoinColumn(name = "custid", insertable = true, updatable = true)
+	@JoinColumn(name = "bookid", insertable = true, updatable = true)
 	private BookVO bookVO;
 	
 	private int saleprice;
