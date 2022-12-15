@@ -1,11 +1,14 @@
 package com.example.demo.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.service.BookService;
@@ -16,9 +19,14 @@ public class BookController {
 	@Autowired
 	private BookService bs;
 	
-	@GetMapping("/book/list")
-	public void findAll(Model model) {
-		model.addAttribute("list", bs.findAll());
+	@RequestMapping("/book/list")
+	public void findAll(Model model, String bookname, HttpServletRequest request) {
+		if(request.getMethod().equals("GET")) {
+			model.addAttribute("list", bs.findAll());
+		}else {
+			model.addAttribute("list", bs.findByBookname(bookname));
+		}
+		
 	}
 	@GetMapping("/book/insert")
 	public void insert() {
@@ -41,5 +49,6 @@ public class BookController {
 		bs.delete(bookid);
 		return mav;
 	}
+	
 	
 }

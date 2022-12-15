@@ -17,6 +17,10 @@ public class BookService {
 	@Autowired
 	private BookDAO dao;
 	
+	public List<BookVO> findByBookname(String bookname){
+		return dao.findByBooknameContaining(bookname);
+	}
+	
 	public List<BookVO> findAll(){
 		return dao.findAll();
 	}
@@ -32,4 +36,5 @@ public class BookService {
 	public void delete(int bookid) {
 		dao.deleteById(bookid);
 	}
+	
 }
