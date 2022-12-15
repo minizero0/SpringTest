@@ -20,6 +20,15 @@ public class BookService {
 	public List<BookVO> findByBookname(String bookname){
 		return dao.findByBooknameContaining(bookname);
 	}
+	public List<BookVO> findByBookid(int bookid){
+		return dao.findByBookidContaining(bookid);
+	}
+	public List<BookVO> findByPublisher(String publisher){
+		return dao.findByPublisherContaining(publisher);
+	}
+	public List<BookVO> findByPrice(int price){
+		return dao.findByPriceContaining(price);
+	}
 	
 	public List<BookVO> findAll(){
 		return dao.findAll();

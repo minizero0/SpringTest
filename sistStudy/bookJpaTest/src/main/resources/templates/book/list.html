@@ -25,7 +25,12 @@
 	<br>
 	
 	<form action="/book/list" method="post">
-		도서명 : <input type = "text" name="bookname">
+		<select name = "column">
+			<option  value = "bookid">책번호</option>
+			<option value = "bookname">책이름</option>
+			<option value = "publisher">출판사</option>
+			<option value = "price">책가격</option>
+		</select> <input type = "text" name="content">
 		<input type = "submit" value="검색">
 	</form>
 	

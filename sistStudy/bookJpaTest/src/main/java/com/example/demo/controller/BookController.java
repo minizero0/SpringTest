@@ -20,11 +20,24 @@ public class BookController {
 	private BookService bs;
 	
 	@RequestMapping("/book/list")
-	public void findAll(Model model, String bookname, HttpServletRequest request) {
+	public void findAll(Model model, String column, String content, HttpServletRequest request) {
 		if(request.getMethod().equals("GET")) {
 			model.addAttribute("list", bs.findAll());
 		}else {
-			model.addAttribute("list", bs.findByBookname(bookname));
+			System.out.println("컬럼:"+column+"\n컨텐트:"+content);
+			if(column.equals("bookname"))
+				model.addAttribute("list", bs.findByBookname(content));
+			else if(column.equals("bookid")) {
+				int bookid = Integer.parseInt(content);
+				model.addAttribute("list", bs.findByBookid(bookid));
+			}
+			else if(column.equals("price")) {
+				int price = Integer.parseInt(content);
+				model.addAttribute("list", bs.findByPrice(price));
+			}
+			else if(column.equals("publisher")) {
+				model.addAttribute("list", bs.findByPublisher(content));
+			}
 		}
 		
 	}

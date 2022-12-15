@@ -11,5 +11,8 @@ import com.example.demo.vo.BookVO;
 public interface BookDAO extends JpaRepository<BookVO, Integer> {
 
 	//도서명으로 검색하는 메소드 추가
+	public List<BookVO> findByBookidContaining(int bookid);
 	public List<BookVO> findByBooknameContaining(String bookname);
+	public List<BookVO> findByPublisherContaining(String publisher);
+	public List<BookVO> findByPriceContaining(int price);
 }
