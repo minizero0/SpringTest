@@ -21,13 +21,13 @@ public class BookService {
 		return dao.findByBooknameContaining(bookname);
 	}
 	public List<BookVO> findByBookid(int bookid){
-		return dao.findByBookidContaining(bookid);
+		return dao.findByBookid(bookid);
 	}
 	public List<BookVO> findByPublisher(String publisher){
 		return dao.findByPublisherContaining(publisher);
 	}
 	public List<BookVO> findByPrice(int price){
-		return dao.findByPriceContaining(price);
+		return dao.findByPrice(price);
 	}
 	
 	public List<BookVO> findAll(){
