@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.demo.dao.View_ListOrdersDAO;
 import com.example.demo.service.BookService;
 import com.example.demo.service.CustomerService;
 import com.example.demo.service.OrdersService;
@@ -25,10 +26,18 @@ public class OrdersController {
 	@Autowired
 	private CustomerService cs;
 	
+	@Autowired
+	private View_ListOrdersDAO view_ListOrdersDAO;
+	
 	@GetMapping("/orders/list")
 	public void list(Model model) {
 		System.out.println(os.findAll());
 		model.addAttribute("list", os.findAll());
+	}
+	
+	@GetMapping("/orders/list2")
+	public void list2(Model model) {
+		model.addAttribute("list", view_ListOrdersDAO.findAll());
 	}
 	
 	@GetMapping("/orders/insert")

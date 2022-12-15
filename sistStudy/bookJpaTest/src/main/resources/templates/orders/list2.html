@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#delete").click(function(event){
+			if(confirm("정말로 삭제하시겠어요?")==false){
+				event.preventDefault();
+			}
+			/*if(confirm("정말로 삭제하시겠어요?")){
+			}else{
+				event.preventDefault();
+			}*/
+		})
+	})
+</script>
+</head>
+<body>
+	<h2>주문목록</h2>
+	<hr>
+	<a href="insert">주문</a>
+	<br>
+	<table border="1" width="60%">
+		<tr>
+			<td>주문번호</td>
+			<td>고객이름</td>
+			<td>도서이름</td>
+			<td>주문가격</td>
+			<td>도서가격</td>
+			<td>주문날짜</td>
+		</tr>
+		<tr th:each="o:${list}">
+			<td th:text="${o.orderid}"></td>
+			<td th:text="${o.name}"></td>
+			<td th:text="${o.bookname}"></td>
+			<td th:text="${o.saleprice}"></td>
+			<td th:text="${o.price}"></td>
+			<td th:text="${o.orderdate}"></td>
+			<!-- <td>
+				<a th:href="'/book/update/'+${b.bookid}" th:text="수정"></a>
+				<a th:href="'/book/delete/'+${b.bookid}" id = "delete" th:text="삭제"></a>
+			</td> -->
+		</tr>
+		
+		
+	</table>
+</body>
+</html>
