@@ -47,7 +47,7 @@ public class OrdersController {
 		if(request.getMethod().equals("GET")) {
 			model.addAttribute("list", view_ListOrdersDAO.findAll());
 		}else {
-			model.addAttribute("list", view_ListOrdersDAO.findByNameContaining(name));
+			model.addAttribute("list", view_ListOrdersDAO.searchName(name));
 		}
 		
 	}
