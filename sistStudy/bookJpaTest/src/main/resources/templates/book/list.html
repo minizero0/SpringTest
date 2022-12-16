@@ -36,10 +36,10 @@
 	
 	<table border="1" width="60%">
 		<tr>
-			<td>책번호</td>
-			<td>책이름</td>
-			<td>출판사</td>
-			<td>책가격</td>
+			<td> <a th:text="책번호" th:href="@{/book/list(sort_col=bookid)}"></a></td>
+			<td> <a th:text="책이름" th:href="@{/book/list(sort_col=bookname)}"></a></td>
+			<td> <a th:text="출판사" th:href="@{/book/list(sort_col=publisher)}"></a></td>
+			<td> <a th:text="책가격" th:href="@{/book/list(sort_col=price)}"></a></td>
 		</tr>
 		<tr th:each="b:${list}">
 			<td th:text="${b.bookid}"></td>

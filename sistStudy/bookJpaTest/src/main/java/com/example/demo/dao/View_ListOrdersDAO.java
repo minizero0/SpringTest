@@ -27,6 +27,28 @@ public interface View_ListOrdersDAO extends JpaRepository<View_ListOrders, Integ
 			+" ELSE v.name\n"
 			+"END\n";
 	
+//	static final String CASE_WHENNum = "\nCASE\n"
+//			+" WHEN :sort_col = 'v.orderid' THEN v.orderid\n"
+//			+" WHEN :sort_col = 'v.price' THEN v.price\n"
+//			+" WHEN :sort_col = 'v.saleprice' THEN v.saleprice\n"
+//			+" ELSE v.orderid\n"
+//			+"END\n";
+//	
+//	static final String CASE_WHENST = "\nCASE\n"
+//			+" WHEN :searchType = 'v.name' THEN v.name\n"
+//			+" WHEN :searchType = 'v.bookname' THEN v.bookname\n"
+//			+" ELSE v.name\n"
+//			+"END\n";
+//	
 	@Query("select v from View_ListOrders v where "+CASE_WEHN+" = :keyword order by :field")
 	public List<View_ListOrders> sortTest(String field,String keyword);
+	
+//	@Query("select v from View_ListOrders v oredr by " + Case_S)
+//	public List<View_ListOrders> findCharSort();
+//	
+//	public List<View_ListOrders> findNumSort();
+//	
+//	public List<View_ListOrders> findSearchCharSort();
+//	
+//	public List<View_ListOrders> findSearchNumSort();
 }

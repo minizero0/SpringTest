@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.lang.reflect.Method;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -50,11 +51,17 @@ public class OrdersController {
 	@RequestMapping("/orders/list2")
 	public void list2(Model model, String sort_column, String keyword, String column, HttpServletRequest request, HttpSession session) {
 		
-		String clsName = "com.example.demo.Person";
-		String methodName = "sayHello";
-		String name = "tiger";
-		
-		
+//		String clsName = "com.example.demo.Person";
+//		String methodName = "pro";
+//		String name = "tiger";
+//		try {
+//			Class cls = Class.forName(clsName);
+//			Object obj = cls.newInstance();
+//			Method m = cls.getMethod(methodName, String.class);
+//			m.invoke(obj, name);
+//		}catch (Exception e) {
+//			// TODO: handle exception
+//		}
 		
 		List<View_ListOrders> list = null;
 		
@@ -67,7 +74,7 @@ public class OrdersController {
 		
 		if(request.getMethod().equals("GET")) {
 			System.out.println(column);
-			if(column==null) {
+			if(column==null && sort_column==null) {
 				list = view_ListOrdersDAO.findAll();
 				//model.addAttribute("list", view_ListOrdersDAO.findAll());
 			}else {
