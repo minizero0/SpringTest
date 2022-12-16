@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -47,11 +48,21 @@ public class OrdersController {
 	}
 	
 	@RequestMapping("/orders/list2")
-	public void list2(Model model, String keyword, String column, HttpServletRequest request, HttpSession session) {
+	public void list2(Model model, String sort_column, String keyword, String column, HttpServletRequest request, HttpSession session) {
+		
+		String clsName = "com.example.demo.Person";
+		String methodName = "sayHello";
+		String name = "tiger";
+		
+		
+		
 		List<View_ListOrders> list = null;
+		
+		//list = view_ListOrdersDAO.findAll(Sort.by(sort_column));
 		
 		if((keyword == null || keyword.equals("")) && session.getAttribute("keyword") != null) {
 			keyword = (String)session.getAttribute("keyword");
+			column = (String)session.getAttribute("column");
 		}
 		
 		if(request.getMethod().equals("GET")) {
@@ -60,8 +71,8 @@ public class OrdersController {
 				list = view_ListOrdersDAO.findAll();
 				//model.addAttribute("list", view_ListOrdersDAO.findAll());
 			}else {
-				System.out.println("column:"+column+"\nkeyword:"+keyword);
-				list = view_ListOrdersDAO.sort(column, keyword);
+				System.out.println("column:"+sort_column+"\nkeyword:"+keyword);
+				list = view_ListOrdersDAO.sortTest(sort_column, keyword);
 				System.out.println(list);
 				//model.addAttribute("list", view_ListOrdersDAO.sort(column));
 			}
@@ -77,6 +88,7 @@ public class OrdersController {
 		}
 		model.addAttribute("list",list);
 		session.setAttribute("keyword", keyword);
+		session.setAttribute("column", column);
 	}
 	
 	@GetMapping("/orders/insert")

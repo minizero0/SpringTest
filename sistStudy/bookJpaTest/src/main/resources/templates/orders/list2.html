@@ -15,10 +15,10 @@
 				event.preventDefault();
 			}*/
 		})
-		$(".column").click(function(){
+		$(".sort_column").click(function(){
 			var column = $(this).html()
 			alert($(this).html())
-			location.href="list2?column="+column;
+			location.href="list2?sort_column="+column;
 			
 		})
 	})
@@ -42,12 +42,12 @@
 	<br>
 	<table border="1" width="60%">
 		<tr>
-			<td class ="column">주문번호</td>
-			<td class ="column">고객이름</td>
-			<td class ="column">도서이름</td>
-			<td class ="column">주문가격</td>
-			<td class ="column">도서가격</td>
-			<td class ="column">주문날짜</td>
+			<td class ="sort_column">orderid</td>
+			<td class ="sort_column">name</td>
+			<td class ="sort_column">bookname</td>
+			<td class ="sort_column">주문가격</td>
+			<td class ="sort_column">도서가격</td>
+			<td class ="sort_column">주문날짜</td>
 		</tr>
 		<tr th:each="o:${list}">
 			<td th:text="${o.orderid}"></td>
