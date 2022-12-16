@@ -15,6 +15,12 @@
 				event.preventDefault();
 			}*/
 		})
+		$(".column").click(function(){
+			var column = $(this).html()
+			alert($(this).html())
+			location.href="list2?column="+column;
+			
+		})
 	})
 </script>
 </head>
@@ -24,19 +30,24 @@
 	<a href="insert">주문</a>
 	<br>
 	<form action="/orders/list2" method="post">
-		고객명 : <input type="text" name = "name">
+		<select name = "column" >
+			<option value = "orderid">주문번호</option>
+			<option value = "name">고객이름</option>
+			<option value = "bookname">도서이름</option>
+		</select>
+		<input type="text" name = "keyword">
 		<input type="submit" value="검색">
 	</form>
 	
 	<br>
 	<table border="1" width="60%">
 		<tr>
-			<td>주문번호</td>
-			<td>고객이름</td>
-			<td>도서이름</td>
-			<td>주문가격</td>
-			<td>도서가격</td>
-			<td>주문날짜</td>
+			<td class ="column">주문번호</td>
+			<td class ="column">고객이름</td>
+			<td class ="column">도서이름</td>
+			<td class ="column">주문가격</td>
+			<td class ="column">도서가격</td>
+			<td class ="column">주문날짜</td>
 		</tr>
 		<tr th:each="o:${list}">
 			<td th:text="${o.orderid}"></td>

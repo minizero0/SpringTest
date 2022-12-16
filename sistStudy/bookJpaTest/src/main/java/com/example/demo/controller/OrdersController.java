@@ -1,6 +1,9 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +19,7 @@ import com.example.demo.service.BookService;
 import com.example.demo.service.CustomerService;
 import com.example.demo.service.OrdersService;
 import com.example.demo.vo.OrdersVO;
+import com.example.demo.vo.View_ListOrders;
 
 import lombok.Setter;
 
@@ -43,13 +47,36 @@ public class OrdersController {
 	}
 	
 	@RequestMapping("/orders/list2")
-	public void list2(Model model, String name, HttpServletRequest request) {
-		if(request.getMethod().equals("GET")) {
-			model.addAttribute("list", view_ListOrdersDAO.findAll());
-		}else {
-			model.addAttribute("list", view_ListOrdersDAO.searchName(name));
+	public void list2(Model model, String keyword, String column, HttpServletRequest request, HttpSession session) {
+		List<View_ListOrders> list = null;
+		
+		if((keyword == null || keyword.equals("")) && session.getAttribute("keyword") != null) {
+			keyword = (String)session.getAttribute("keyword");
 		}
 		
+		if(request.getMethod().equals("GET")) {
+			System.out.println(column);
+			if(column==null) {
+				list = view_ListOrdersDAO.findAll();
+				//model.addAttribute("list", view_ListOrdersDAO.findAll());
+			}else {
+				System.out.println("column:"+column+"\nkeyword:"+keyword);
+				list = view_ListOrdersDAO.sort(column, keyword);
+				System.out.println(list);
+				//model.addAttribute("list", view_ListOrdersDAO.sort(column));
+			}
+		}else {
+			switch(column) {
+			case "name":list =  view_ListOrdersDAO.findByNameContaining(keyword);break;
+				//model.addAttribute("list", view_ListOrdersDAO.findByNameContaining(keyword));break;
+			case "bookname":list =  view_ListOrdersDAO.findByBooknameContaining(keyword);break;
+			//case "bookname": model.addAttribute("list", view_ListOrdersDAO.findByBooknameContaining(keyword));break;
+			case "orderid":list =  view_ListOrdersDAO.findByOrderid(Integer.parseInt(keyword));break;
+			//case "orderid" : model.addAttribute("list", view_ListOrdersDAO.findByOrderid(Integer.parseInt(keyword)));break;
+			}
+		}
+		model.addAttribute("list",list);
+		session.setAttribute("keyword", keyword);
 	}
 	
 	@GetMapping("/orders/insert")
