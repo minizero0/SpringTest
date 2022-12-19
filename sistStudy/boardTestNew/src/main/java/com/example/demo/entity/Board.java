@@ -21,4 +21,5 @@ public class Board {
 	private String content;
 	private Date regdate;
 	private int hit;
+	private String ip;
 }

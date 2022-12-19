@@ -34,7 +34,7 @@ public class BoardService {
 	}
 	
 	public Board findByNo(int no) {
-		return dao.getOne(no);
+		return dao.findById(no).get();
 	}
 	
 }

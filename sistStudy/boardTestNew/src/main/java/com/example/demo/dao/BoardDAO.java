@@ -16,7 +16,7 @@ public interface BoardDAO extends JpaRepository<Board, Integer> {
 	int getNextNo();
 	
 	@Modifying
-	@Query(value = "insert into Board b(b.no,b.title,b.writer,b.pwd,b.content,b.regdate,b.hit) values(:#{#b.no},:#{#b.title},:#{#b.writer},:#{#b.pwd},:#{#b.content},sysdate,0)", nativeQuery = true)
+	@Query(value = "insert into Board b(b.no,b.title,b.writer,b.pwd,b.content,b.regdate,b.hit,b.ip) values(:#{#b.no},:#{#b.title},:#{#b.writer},:#{#b.pwd},:#{#b.content},sysdate,0,:#{#b.ip})", nativeQuery = true)
 	@Transactional
 	public void insert(Board b);
 
