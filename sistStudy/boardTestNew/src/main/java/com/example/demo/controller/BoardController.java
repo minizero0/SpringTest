@@ -26,9 +26,14 @@ public class BoardController {
 	
 	@PostMapping("/board/insert")
 	public ModelAndView insertSubmit(Board b) {
-		ModelAndView mav = new ModelAndView();
+		ModelAndView mav = new ModelAndView("redirect:/board/list");
 		bs.insert(b);
 		return mav;
+	}
+	
+	@GetMapping("/board/list")
+	public void list(Model model) {
+		model.addAttribute("list", bs.findAll());
 	}
 	
 	

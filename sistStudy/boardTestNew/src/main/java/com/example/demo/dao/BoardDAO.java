@@ -12,11 +12,11 @@ import com.example.demo.entity.Board;
 @Repository
 public interface BoardDAO extends JpaRepository<Board, Integer> {
 
-	@Query("select nvl(max(no), 0)+1 from board")
+	@Query("select nvl(max(no), 0)+1 from Board")
 	int getNextNo();
 	
 	@Modifying
-	@Query(value = "insert into Board b(b.no,b.title,b.writer,b.pwd,b.content,b.regdate,b.hit) values(:#{#b.no},:#{#b.title},:#{#b.writer},:#{#b.pwd},:#{#b.content},sysdate,:#{#hit})", nativeQuery = true)
+	@Query(value = "insert into Board b(b.no,b.title,b.writer,b.pwd,b.content,b.regdate,b.hit) values(:#{#b.no},:#{#b.title},:#{#b.writer},:#{#b.pwd},:#{#b.content},sysdate,0)", nativeQuery = true)
 	@Transactional
 	public void insert(Board b);
 
