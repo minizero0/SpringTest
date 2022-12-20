@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,10 +48,14 @@ public class BoardController {
 		String fname = uploadFile.getOriginalFilename();
 		if(fname != null && !fname.equals("")) {
 			try {
-				byte[] data = uploadFile.getBytes();
-				System.out.println("path:"+path);
-				FileOutputStream fos = new FileOutputStream(path+"/"+fname);
-				fos.write(data);
+//				byte[] data = uploadFile.getBytes();
+//				System.out.println("path:"+path);
+//				FileOutputStream fos = new FileOutputStream(path+"/"+fname);
+//				fos.write(data);
+//				fos.close();
+
+				FileOutputStream fos = new FileOutputStream(path + "/" + fname);
+				FileCopyUtils.copy(uploadFile.getBytes(), fos);
 				fos.close();
 			}catch (Exception e) {
 				System.out.println(e.getMessage());
