@@ -16,8 +16,14 @@
 			<td>등록일</td>
 		</tr>
 		<tr th:each="b:${list}">
-			<td><a th:text ="${b.no}" th:href="@{'/board/detail/'+${b.no}}"></a></td>
-			<td th:text="${b.title}"></td>
+			<td th:text="${b.no}"></td>
+			<td>
+				<span th:if="${b.b_level} >0">
+					<span th:each="i:${#numbers.sequence(1,b.b_level)}">==</span>
+					>
+				</span>
+				<a th:text ="${b.title}" th:href="@{'/board/detail/'+${b.no}}"></a>
+			</td>
 			<td th:text="${b.writer}"></td>
 			<td th:text="${b.regdate}"></td>
 		</tr>

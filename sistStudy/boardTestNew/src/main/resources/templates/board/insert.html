@@ -8,12 +8,13 @@
 	<h2>게시물 등록</h2>
 	<hr>
 	
-	<form action="insert" method="post">
+	<form action="insert" method="post" enctype="multipart/form-data">
 		<input type="hidden" name = "no" th:value="${no}">
 		글번호 : <p th:text="${no}"></p>
 		글제목 :	<input type="text" name = "title"><br>
 		작성자 : <input type="text" name = "writer"><br>
 		비밀번호 : <input type="number" name = "pwd"><br>
+		첨부파일 : <input type = "file" name = "uploadFile"><br>
 		글내용 : <br>
 		<textarea rows="10" cols="80" name = "content"></textarea>
 		<input type="submit" value = "등록">

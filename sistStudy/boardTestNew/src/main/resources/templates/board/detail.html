@@ -13,7 +13,11 @@
 		작성자 : <span th:text="${b.writer}"></span><br>
 		등록일 : <span th:text="${b.regdate}"></span><br>
 		조회수 : <span th:text="${b.hit}"></span><br>
+		첨부포 : <img alt="" th:src="@{'/images/'+${b.fname}}" width="200" height="200"><br>
+		<span th:text="${b.fname}" ></span><br>
 		글내용 : <br>
 		<textarea rows="10" cols="80" readonly="readonly" th:text="${b.content}"></textarea>
+		
+		<a th:href = "@{/board/insert(no=${b.no})}">답글</a>
 </body>
 </html>

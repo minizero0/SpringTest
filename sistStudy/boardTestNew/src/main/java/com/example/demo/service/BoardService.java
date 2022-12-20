@@ -33,8 +33,26 @@ public class BoardService {
 		return dao.findAll();
 	}
 	
-	public Board findByNo(int no) {
+	public Board findById(int no) {
 		return dao.findById(no).get();
+	}
+	
+	public int findByNo(int no) {
+		try{
+			return dao.findByNo(no);
+		}catch (Exception e) {
+			return -1;
+		}
+	}
+
+	public void updateStep(int b_ref, int b_step) {
+		dao.updateStep(b_ref, b_step);
+		System.out.println("ref"+b_ref +"\nb_step"+b_step);
+		
+	}
+	
+	public List<Board> selectAll(){
+		return dao.selectAll();
 	}
 	
 }
