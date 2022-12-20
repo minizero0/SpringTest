@@ -55,8 +55,16 @@ public class BoardService {
 		return dao.selectAll();
 	}
 	
-	public void delete(int no) {
-		dao.deleteById(no);
+	public int delete(int no, String pwd) {
+		int re = -1;
+		re = dao.deleteBoard(no, pwd);
+		return re;
+	}
+	
+	public int update(Board b) {
+		int re = -1;
+		re = dao.update(b);
+		return re;
 	}
 	
 }

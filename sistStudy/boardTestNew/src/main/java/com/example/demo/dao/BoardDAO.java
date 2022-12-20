@@ -37,5 +37,14 @@ public interface BoardDAO extends JpaRepository<Board, Integer> {
 	@Query("select no from Board where no = ?1")
 	public int findByNo(int no);
 	
+	@Modifying
+	@Query("delete Board b where b.no = ?1 and b.pwd = ?2")
+	@Transactional
+	public int deleteBoard(int no, String pwd);
+	
+	@Modifying
+	@Query(value = "update Board b set b.title = :#{#b.title}, b.writer = :#{#b.writer}, b.fname = :#{#b.fname}, b.content = :#{#b.content} where b.no = :#{#b.no} and b.pwd = :#{#b.pwd}",nativeQuery = true)
+	@Transactional
+	public int update(Board b);
 	
 }

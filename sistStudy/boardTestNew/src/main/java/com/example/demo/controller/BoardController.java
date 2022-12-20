@@ -107,13 +107,68 @@ public class BoardController {
 	}
 	
 	@GetMapping("/board/delete/{no}")
-	public ModelAndView delete(@PathVariable int no, HttpServletRequest request) {
-		ModelAndView mav = new ModelAndView("redirect:/board/list");
+	public ModelAndView deleteForm(@PathVariable int no) {
+		ModelAndView mav = new ModelAndView("/board/delete");
+		mav.addObject("no",no);
+		return mav;
+	}
+	
+	@PostMapping("/board/delete")
+	public ModelAndView delete(int no,String pwd,HttpServletRequest request) {
 		String fname = bs.findById(no).getFname();
 		String path = request.getServletContext().getRealPath("images");
-		File file = new File(path + "/" + fname);
-		file.delete();
-		bs.delete(no);
+		ModelAndView mav = new ModelAndView("redirect:/board/list");
+		if (bs.delete(no,pwd) > 0) {
+			try {
+				File file = new File(path + "/" + fname);
+				file.delete();
+			}catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+		}		
+		return mav;
+	}
+	
+	@GetMapping("/board/update/{no}")
+	public ModelAndView updateForm(@PathVariable int no) {
+		ModelAndView mav = new ModelAndView("/board/update");
+		mav.addObject("b",bs.findById(no));
+		return mav;
+	}
+	
+	@PostMapping("/board/update")
+	public ModelAndView delete(Board b,HttpServletRequest request) {
+		System.out.println(b);
+		String oldFname = bs.findById(b.getNo()).getFname();
+		System.out.println("oldFname");
+		String path = request.getServletContext().getRealPath("images");
+		MultipartFile uploadFile = b.getUploadFile();
+		String fname = uploadFile.getOriginalFilename();
+		ModelAndView mav = new ModelAndView("redirect:/board/list");
+		
+		if(fname != null && !fname.equals("")) {
+			b.setFname(fname);
+		}else {
+			fname = oldFname;
+			b.setFname(fname);
+		}
+		
+		
+		
+		if (bs.update(b) > 0 ) {
+			try {
+				File file = new File(path + "/" + oldFname);
+				file.delete();
+				FileOutputStream fos = new FileOutputStream(path + "/" + fname);
+				FileCopyUtils.copy(uploadFile.getBytes(), fos);
+				fos.close();
+			}catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+		}else {
+			mav.setViewName("error");
+			mav.addObject("msg", "수정오류 발생");
+		}
 		return mav;
 	}
 	
