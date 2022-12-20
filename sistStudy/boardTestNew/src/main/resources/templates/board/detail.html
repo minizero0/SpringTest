@@ -13,14 +13,22 @@
 		작성자 : <span th:text="${b.writer}"></span><br>
 		등록일 : <span th:text="${b.regdate}"></span><br>
 		조회수 : <span th:text="${b.hit}"></span><br>
-		ip주소 : <sapn th:text="${b.ip}"></sapn><br>
+		ip주소 : <span th:text="${b.ip}"></span><br>
 		첨부파일 : <span th:text="${b.fname}" ></span><br>
 		<div th:if="${b.fname}!=null">
-			<div th:if="${#strings.endsWith(b.fname,'.jpg')}">
+			<div th:if="${#strings.endsWith(b.fname,'.jpg')} or ${#strings.endsWith(b.fname,'.png')}">
 				<img alt="" th:src="@{'/images/'+${b.fname}}" width="200" height="200">
 			</div>
 		</div>
 		
+		<div th:if="${b.fname}!=null">
+			<div th:each="ext:${imgList}">
+				<div th:if="${#strings.endsWith(b.fname,ext)}">
+					<img alt="" th:src="@{'/images/'+${b.fname}}" width="200" height="200">
+				</div>
+			</div>
+		</div>
+				
 		글내용 : <br>
 		<textarea rows="10" cols="80" readonly="readonly" th:text="${b.content}"></textarea>
 		

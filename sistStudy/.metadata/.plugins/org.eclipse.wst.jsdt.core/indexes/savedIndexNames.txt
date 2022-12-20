@@ -25,7 +25,6 @@ INDEX VERSION 1.4+/Users/mini0/SsangYong/SpringTest/sistStudy/.metadata/.plugins
 1368213337.index
 2014453542.index
 1566280389.index
-2448008508.index
 3267450628.index
 1022971412.index
 4258136185.index

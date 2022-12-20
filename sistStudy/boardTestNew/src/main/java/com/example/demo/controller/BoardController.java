@@ -2,7 +2,7 @@ package com.example.demo.controller;
 
 import java.io.File;
 import java.io.FileOutputStream;
-
+import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -101,8 +101,13 @@ public class BoardController {
 	@GetMapping("/board/detail/{no}")
 	public ModelAndView detail(@PathVariable int no) {
 		ModelAndView mav = new ModelAndView("/board/detail");
+		ArrayList<String> imgList = new ArrayList<>();
+		imgList.add(".jpg");
+		imgList.add(".png");
+		imgList.add(".jpeg");
 		System.out.println(no);
 		mav.addObject("b", bs.findById(no));
+		mav.addObject("imgList", imgList);
 		return mav;
 	}
 	
