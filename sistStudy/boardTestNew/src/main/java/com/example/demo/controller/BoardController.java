@@ -15,18 +15,41 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.demo.dao.BoardDAO;
 import com.example.demo.entity.Board;
 import com.example.demo.service.BoardService;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import lombok.Setter;
 
 @Controller
 @Setter
 public class BoardController {
 	
+	int pageSIZE = 5;
+	int totalRecord = 0;
+	int totalPage = 1;
+	
+	
 	@Autowired
 	private BoardService bs;
+	
+	
+	@GetMapping("/board/list/{pageNUM}")
+	public ModelAndView list(Model model, @PathVariable int pageNUM, HttpSession session) {
+		//model.addAttribute("list", bs.findAll());
+		ModelAndView mav = new ModelAndView("/board/list");
+		totalRecord = bs.total();
+		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
+		int start = (pageNUM-1)*pageSIZE+1;
+		int end = start + pageSIZE-1;
+		
+		model.addAttribute("id",session.getAttribute("id"));
+		model.addAttribute("totalPage", totalPage);
+		model.addAttribute("list", bs.selectAll(start, end));
+		return mav;
+	}
 	
 	@GetMapping("/board/insert")
 	public void insertForm(@RequestParam(value = "no", defaultValue="0") int no ,Model model) {
@@ -92,11 +115,7 @@ public class BoardController {
 		return mav;
 	}
 	
-	@GetMapping("/board/list")
-	public void list(Model model) {
-		//model.addAttribute("list", bs.findAll());
-		model.addAttribute("list", bs.selectAll());
-	}
+	
 	
 	@GetMapping("/board/detail/{no}")
 	public ModelAndView detail(@PathVariable int no) {

@@ -17,8 +17,9 @@ public interface BoardDAO extends JpaRepository<Board, Integer> {
 	
 	//public List<Board> findAllByOrderByB_refDescB_stepAsc();
 	
-	@Query("select b from Board b order by b.b_ref desc, b.b_step asc")
-	public List<Board> selectAll();
+	//@Query("select b from Board b where b.no between ?1 and ?2 order by b.b_ref desc, b.b_step asc")
+	@Query(value = "select no,b_level,b_ref,b_step,content,fname,hit,ip,pwd,regdate,title,writer from (select a.*, rownum n from (select * from Board order by b_ref desc, b_step) a) where n between ?1 and ?2", nativeQuery=true)
+	public List<Board> selectAll(int start, int end);
 	
 
 	@Query("select nvl(max(no), 0)+1 from Board")
@@ -46,5 +47,9 @@ public interface BoardDAO extends JpaRepository<Board, Integer> {
 	@Query(value = "update Board b set b.title = :#{#b.title}, b.writer = :#{#b.writer}, b.fname = :#{#b.fname}, b.content = :#{#b.content} where b.no = :#{#b.no} and b.pwd = :#{#b.pwd}",nativeQuery = true)
 	@Transactional
 	public int update(Board b);
+	
+	
+	@Query("select count(*) from Board")
+	public int total();
 	
 }

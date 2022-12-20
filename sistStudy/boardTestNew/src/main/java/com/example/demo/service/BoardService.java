@@ -51,8 +51,8 @@ public class BoardService {
 		
 	}
 	
-	public List<Board> selectAll(){
-		return dao.selectAll();
+	public List<Board> selectAll(int start, int end){
+		return dao.selectAll(start, end);
 	}
 	
 	public int delete(int no, String pwd) {
@@ -65,6 +65,10 @@ public class BoardService {
 		int re = -1;
 		re = dao.update(b);
 		return re;
+	}
+	
+	public int total() {
+		return dao.total();
 	}
 	
 }
