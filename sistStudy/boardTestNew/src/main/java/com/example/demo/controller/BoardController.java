@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.io.File;
 import java.io.FileOutputStream;
 
 
@@ -105,5 +106,15 @@ public class BoardController {
 		return mav;
 	}
 	
+	@GetMapping("/board/delete/{no}")
+	public ModelAndView delete(@PathVariable int no, HttpServletRequest request) {
+		ModelAndView mav = new ModelAndView("redirect:/board/list");
+		String fname = bs.findById(no).getFname();
+		String path = request.getServletContext().getRealPath("images");
+		File file = new File(path + "/" + fname);
+		file.delete();
+		bs.delete(no);
+		return mav;
+	}
 	
 }

@@ -55,4 +55,8 @@ public class BoardService {
 		return dao.selectAll();
 	}
 	
+	public void delete(int no) {
+		dao.deleteById(no);
+	}
+	
 }
