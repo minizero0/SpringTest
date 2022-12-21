@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>게시물 등록</h2>
+	<hr>
+	
+	<form action="insert" method="post" enctype="multipart/form-data">
+		<input type="hidden" name = "no" th:value="${no}">
+		글번호 : <p th:text="${no}"></p>
+		작성자 : <span th:text="${session.id}"></span> <input type="hidden" name = "writer" th:value ="${session.id}"><br>
+		아이디 : <span th:text="${session.id}"></span> <input type="hidden" name = "Member.id" th:value ="${session.id}"><br>
+		글제목 :	<input type="text" name = "title"><br>
+		비밀번호 : <input type="number" name = "pwd"><br>
+		첨부파일 : <input type = "file" name = "uploadFile"><br>
+		글내용 : <br>
+		<textarea rows="10" cols="80" name = "content"></textarea>
+		<input type="submit" value = "등록">
+		<input type="reset" value = "다시입력">
+	</form>
+</body>
+</html>

@@ -45,25 +45,32 @@ public class BoardController {
 		int start = (pageNUM-1)*pageSIZE+1;
 		int end = start + pageSIZE-1;
 		
-		model.addAttribute("id",session.getAttribute("id"));
+		//model.addAttribute("id",session.getAttribute("id"));
 		model.addAttribute("totalPage", totalPage);
 		model.addAttribute("list", bs.selectAll(start, end));
 		return mav;
 	}
 	
 	@GetMapping("/board/insert")
-	public void insertForm(@RequestParam(value = "no", defaultValue="0") int no ,Model model) {
+	public ModelAndView insertForm(HttpSession session, @RequestParam(value = "no", defaultValue="0") int no ,Model model) {
+		ModelAndView mav = new ModelAndView();
+		String id = (String)session.getAttribute("id");
+		if(id == null) {
+			mav.setViewName("error");
+			mav.addObject("msg","로그인하세요");
+		}
 		System.out.println(no);
 		if(no>0) {
 			model.addAttribute("no", no);
 		}else {
 			model.addAttribute("no", bs.getNextNo());
 		}
+		return mav;
 	}
 	
 	@PostMapping("/board/insert")
 	public ModelAndView insertSubmit(Board b, HttpServletRequest request) {
-		ModelAndView mav = new ModelAndView("redirect:/board/list");
+		ModelAndView mav = new ModelAndView("redirect:/board/list/1");
 		String ip = request.getRemoteAddr();
 		b.setIp(ip);
 		

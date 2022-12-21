@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>게시물 상세보기</h2>
+	<hr>
+	<a href = "/board/list">목록</a>
+		글번호 : <span th:text="${b.no}"></span><br>
+		글제목 : <span th:text="${b.title}"></span><br>
+		작성자 : <span th:text="${b.writer}"></span><br>
+		등록일 : <span th:text="${b.regdate}"></span><br>
+		조회수 : <span th:text="${b.hit}"></span><br>
+		ip주소 : <span th:text="${b.ip}"></span><br>
+		첨부파일 : <span th:text="${b.fname}" ></span><br>
+		
+		<div th:if="${b.fname}!=null">
+			<div th:if="${#strings.endsWith(b.fname,'.jpg')} or ${#strings.endsWith(b.fname,'.png')}">
+				<img alt="" th:src="@{'/images/'+${b.fname}}" width="200" height="200">
+			</div>
+			<div th:unless="${#strings.endsWith(b.fname,'.jpg')} or ${#strings.endsWith(b.fname,'.png')}">
+				<a th:href="@{'/images/'+${b.fname}}" th:text="${b.fname}"></a>
+			</div>
+		</div>
+		
+		<div th:if="${b.fname}!=null">
+			<div th:each="ext:${imgList}">
+				<div th:if="${#strings.endsWith(b.fname,ext)}">
+					<img alt="" th:src="@{'/images/'+${b.fname}}" width="200" height="200">
+				</div>
+			</div>
+		</div>
+				
+		글내용 : <br>
+		<textarea rows="10" cols="80" readonly="readonly" th:text="${b.content}"></textarea>
+		
+		<hr>
+		<a th:href = "@{/board/insert(no=${b.no})}">답글</a>
+		<a th:href = "@{'/board/update/'+${b.no}}">수정</a>
+		<a th:href = "@{'/board/delete/'+${b.no}}">삭제</a>
+		<!-- 게시물 삭제 기능을 구현 해 보자
+				삭제에 성공하면 해당파일도 삭제하도록 한다.
+		 -->
+</body>
+</html>
