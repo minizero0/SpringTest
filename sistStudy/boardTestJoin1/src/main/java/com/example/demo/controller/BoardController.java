@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,18 +37,30 @@ public class BoardController {
 	private BoardService bs;
 	
 	
-	@GetMapping("/board/list/{pageNUM}")
-	public ModelAndView list(Model model, @PathVariable int pageNUM, HttpSession session) {
+	@GetMapping("/board/list/{pageNUM}/{id}")
+	public ModelAndView list(Model model, @PathVariable int pageNUM, @PathVariable String id, HttpSession session) {
+		List<Board> list = null;
 		//model.addAttribute("list", bs.findAll());
 		ModelAndView mav = new ModelAndView("/board/list");
+		System.out.println(id);
 		totalRecord = bs.total();
-		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
-		int start = (pageNUM-1)*pageSIZE+1;
-		int end = start + pageSIZE-1;
 		
 		//model.addAttribute("id",session.getAttribute("id"));
 		model.addAttribute("totalPage", totalPage);
-		model.addAttribute("list", bs.selectAll(start, end));
+		if(id!=null && !id.equals("all")) {
+			totalRecord = bs.countById(id);
+		}
+		
+		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
+		int start = (pageNUM-1)*pageSIZE+1;
+		int end = start + pageSIZE-1;
+		if(id!=null && !id.equals("all")) {
+			model.addAttribute("list", bs.selectAllById(start, end, id));
+		}else {
+			model.addAttribute("list", bs.selectAll(start, end));
+		}
+		model.addAttribute("totalPage", totalPage);
+		
 		return mav;
 	}
 	
@@ -82,7 +95,7 @@ public class BoardController {
 	
 	@PostMapping("/board/insert")
 	public ModelAndView insertSubmit(Board b, HttpServletRequest request) {
-		ModelAndView mav = new ModelAndView("redirect:/board/list/1");
+		ModelAndView mav = new ModelAndView("redirect:/board/list/1/all");
 		String ip = request.getRemoteAddr();
 		b.setIp(ip);
 		
@@ -160,7 +173,7 @@ public class BoardController {
 	public ModelAndView delete(int no,String pwd,HttpServletRequest request) {
 		String fname = bs.findById(no).getFname();
 		String path = request.getServletContext().getRealPath("images");
-		ModelAndView mav = new ModelAndView("redirect:/board/list");
+		ModelAndView mav = new ModelAndView("redirect:/board/list/1/all");
 		if (bs.delete(no,pwd) > 0) {
 			try {
 				File file = new File(path + "/" + fname);
@@ -187,7 +200,7 @@ public class BoardController {
 		String path = request.getServletContext().getRealPath("images");
 		MultipartFile uploadFile = b.getUploadFile();
 		String fname = uploadFile.getOriginalFilename();
-		ModelAndView mav = new ModelAndView("redirect:/board/list");
+		ModelAndView mav = new ModelAndView("redirect:/board/list/1/all");
 		
 		if(fname != null && !fname.equals("")) {
 			b.setFname(fname);

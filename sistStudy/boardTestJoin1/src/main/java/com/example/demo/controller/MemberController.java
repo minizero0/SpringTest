@@ -25,7 +25,7 @@ public class MemberController {
 	
 	@PostMapping("/member/login")
 	public ModelAndView loginSubmit(String id, String pwd, HttpSession session) {
-		ModelAndView mav = new ModelAndView("redirect:/board/list/1");
+		ModelAndView mav = new ModelAndView("redirect:/board/list/1/all");
 		Member m = ms.login(id, pwd);
 		if(m != null) {
 			session.setAttribute("id", id);
