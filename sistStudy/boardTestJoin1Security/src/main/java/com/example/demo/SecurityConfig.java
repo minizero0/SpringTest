@@ -15,7 +15,7 @@ public class SecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
 		http
 		.authorizeHttpRequests()
-		.requestMatchers("/", "/member/login").permitAll()
+		.requestMatchers("/", "/member/login", "/member/join").permitAll()
 		.anyRequest().authenticated();
 		
 		//로그인 설정

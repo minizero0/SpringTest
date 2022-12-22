@@ -37,9 +37,14 @@
 		<textarea rows="10" cols="80" readonly="readonly" th:text="${b.content}"></textarea>
 		
 		<hr>
-		<a th:href = "@{/board/insert(no=${b.no})}">답글</a>
-		<a th:href = "@{'/board/update/'+${b.no}}">수정</a>
+		<th:block th:if="${b.member.id != session.id2}">
+			<a th:href = "@{/board/insert(no=${b.no})}">답글</a>
+		</th:block>
+		<th:block th:if="${b.member.id == session.id2}">
+			<a th:href = "@{'/board/update/'+${b.no}}">수정</a>
 		<a th:href = "@{'/board/delete/'+${b.no}}">삭제</a>
+		</th:block>
+		
 		<!-- 게시물 삭제 기능을 구현 해 보자
 				삭제에 성공하면 해당파일도 삭제하도록 한다.
 		 -->
