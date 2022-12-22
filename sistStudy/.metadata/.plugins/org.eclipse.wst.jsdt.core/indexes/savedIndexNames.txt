@@ -1,5 +1,4 @@
 INDEX VERSION 1.4+/Users/mini0/SsangYong/SpringTest/sistStudy/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-73320779.index
 1896803848.index
 675364004.index
 2165094997.index
@@ -7,7 +6,6 @@ INDEX VERSION 1.4+/Users/mini0/SsangYong/SpringTest/sistStudy/.metadata/.plugins
 3160461270.index
 2076383450.index
 1779465099.index
-2213520629.index
 3832360070.index
 619716795.index
 854334071.index
@@ -25,7 +23,6 @@ INDEX VERSION 1.4+/Users/mini0/SsangYong/SpringTest/sistStudy/.metadata/.plugins
 2083849364.index
 1368213337.index
 2014453542.index
-2216477325.index
 1404535492.index
 3267450628.index
 2206519713.index
@@ -33,5 +30,4 @@ INDEX VERSION 1.4+/Users/mini0/SsangYong/SpringTest/sistStudy/.metadata/.plugins
 3829268369.index
 2150127096.index
 4258136185.index
-1609399359.index
 2221329786.index

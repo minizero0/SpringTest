@@ -90,8 +90,9 @@ public class BoardController {
 	
 	@GetMapping("/board/insert")
 	public ModelAndView insertForm(HttpSession session, @RequestParam(value = "no", defaultValue="0") int no ,Model model) {
-		ModelAndView mav = new ModelAndView();
+		ModelAndView mav = new ModelAndView("/board/insert");
 		String id = (String)session.getAttribute("id2");
+		System.out.println("id:"+id);
 		if(id == null) {
 			mav.setViewName("error");
 			mav.addObject("msg","로그인하세요");

@@ -20,6 +20,8 @@
 			<td th:text="${m.name}"></td>
 			<td th:text="${m.pwd}"></td>
 			<td th:text="${m.role}"></td>
+			<td><a th:href="@{'/admin/member/update/'+${m.id}}">수정</a></td>
+			<td><a th:href="@{'/admin/member/delete/'+${m.id}}">삭제</a></td>
 		</tr>
 		
 	</table>
