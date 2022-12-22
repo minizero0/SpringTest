@@ -21,6 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.BoardDAO;
+import com.example.demo.dao.MemberDAO;
 import com.example.demo.entity.Board;
 import com.example.demo.entity.Member;
 import com.example.demo.service.BoardService;
@@ -40,6 +41,9 @@ public class BoardController {
 	
 	@Autowired
 	private BoardService bs;
+	
+	@Autowired
+	private MemberDAO memberDAO;
 	
 	
 	@GetMapping("/board/list/{pageNUM}/{id}")
@@ -79,7 +83,7 @@ public class BoardController {
 		//아이디 정보를 세션에 상태유지 한다.
 		//만약, id뿐 아니라 로그인한 회원의 다른정보도 필요하다면 dao를 통해 회원 정보를 가져와서 상태유지
 		
-		session.setAttribute("id2", id2);
+		session.setAttribute("id2", memberDAO.findById(id2).get());
 		
 		return mav;
 	}

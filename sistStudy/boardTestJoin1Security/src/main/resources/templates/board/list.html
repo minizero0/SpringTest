@@ -9,11 +9,13 @@
 	<hr>
 	<a href = "/board/insert">등록</a><br>
 	<a href = "/board/list/1/all">All</a><br>
-	<a th:href = "@{'/board/list/1/'+${session.id2}}">내 글</a><br>
+	<a th:href = "@{'/board/list/1/'+${session.id2.id}}">내 글</a><br>
 	 <a href = "/logout">로그아웃</a><br>
+	<th:block th:if="${session.id2.role} == admin">
+		<a href="/admin/index">관리자메뉴</a>
+	</th:block>
 	
-	
-	<span th:text="${session.id2}"></span>
+	<span th:text="${session.id2.id}"></span>
 	
 	<table border="1" width = "80%">
 		<tr>

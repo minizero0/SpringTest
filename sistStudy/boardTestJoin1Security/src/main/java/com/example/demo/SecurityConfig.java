@@ -16,6 +16,7 @@ public class SecurityConfig {
 		http
 		.authorizeHttpRequests()
 		.requestMatchers("/", "/member/login", "/member/join").permitAll()
+		.requestMatchers("/admin/**").hasRole("admin")
 		.anyRequest().authenticated();
 		
 		//로그인 설정

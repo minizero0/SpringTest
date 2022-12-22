@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>관리자 메뉴</h2>
+	<hr>
+	<a href = "/member/adminJoin">회원등록</a>
+	<table border="1" width="60%">
+		<tr>
+			<td>아이디</td>
+			<td>이름</td>
+			<td>비밀번호</td>
+			<td>권한</td>
+		</tr>
+		
+		<tr th:each="m:${list}">
+			<td th:text="${m.id}"></td>
+			<td th:text="${m.name}"></td>
+			<td th:text="${m.pwd}"></td>
+			<td th:text="${m.role}"></td>
+		</tr>
+		
+	</table>
+</body>
+</html>
