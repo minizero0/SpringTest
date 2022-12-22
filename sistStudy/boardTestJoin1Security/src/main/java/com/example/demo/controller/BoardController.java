@@ -65,6 +65,7 @@ public class BoardController {
 			model.addAttribute("list", bs.selectAll(start, end));
 		}
 		model.addAttribute("totalPage", totalPage);
+		model.addAttribute("id", id);
 		//인증된(로그인한) 회원의 정보를 가져오기 위하여
 		//시큐리티의 인증객체가 필요.
 		Authentication authentication = 

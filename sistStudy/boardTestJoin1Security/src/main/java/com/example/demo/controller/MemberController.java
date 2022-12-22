@@ -52,12 +52,15 @@ public class MemberController {
 			mav.setViewName("error");
 		}
 		return mav;
+		
 	}
 	
 	@GetMapping("/member/login")
 	public void loginForm(Model model) {
 		memberDAO.save(new Member("kim", PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("kim"), "kim", "user",null));
 		memberDAO.save(new Member("messi", PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("messi"), "messi", "user",null));
+		memberDAO.save(new Member("sist01", PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("sist01"), "관리자1", "admin",null));
+		memberDAO.save(new Member("sist02", PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("sist02"), "관리자2", "admin",null));
 	}
 	
 //	@PostMapping("/member/login")
