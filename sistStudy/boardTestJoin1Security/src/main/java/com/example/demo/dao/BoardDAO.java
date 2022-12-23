@@ -17,6 +17,9 @@ public interface BoardDAO extends JpaRepository<Board, Integer> {
 	
 	//public List<Board> findAllByOrderByB_refDescB_stepAsc();
 	
+	@Query(value="select fname from board where id = ?1", nativeQuery = true)
+	public List<String> findFnameByid(String id);
+	
 	//@Query("select b from Board b where b.no between ?1 and ?2 order by b.b_ref desc, b.b_step asc")
 	@Query(value = "select no,b_level,b_ref,b_step,content,fname,hit,ip,pwd,regdate,title,writer,id from (select a.*, rownum n from (select * from Board order by b_ref desc, b_step) a) where n between ?1 and ?2", nativeQuery=true)
 	public List<Board> selectAll(int start, int end);

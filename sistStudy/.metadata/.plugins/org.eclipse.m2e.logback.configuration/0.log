@@ -21824,3 +21824,185 @@ Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was
 2022-12-23 00:52:12,890 [Worker-231: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-12-23 00:52:12,890 [Worker-231: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-12-23 00:52:12,890 [Worker-231: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 09:13:18,096 [Worker-238: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:13:18,332 [Worker-238: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:13:18,378 [Worker-238: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:13:20,222 [Worker-245: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:13:20,289 [Worker-245: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:13:20,294 [Worker-245: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:17:20,329 [Worker-238: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:17:20,440 [Worker-238: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:17:20,477 [Worker-238: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:19:01,102 [Worker-247: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:19:01,157 [Worker-247: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:19:01,161 [Worker-247: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:20:41,007 [Worker-251: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:20:41,020 [Worker-251: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:20:41,026 [Worker-251: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:24:18,882 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:24:18,965 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:24:18,978 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:24:35,879 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:24:35,935 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:24:35,953 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:25:31,838 [Worker-260: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:25:31,858 [Worker-260: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:25:31,875 [Worker-260: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:25:43,528 [Worker-261: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:25:43,594 [Worker-261: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:25:43,606 [Worker-261: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:25:50,144 [Worker-255: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:25:50,151 [Worker-255: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:25:50,156 [Worker-255: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:26:55,523 [Worker-263: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:26:55,549 [Worker-263: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:26:55,552 [Worker-263: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:27:07,108 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:27:07,144 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:27:07,147 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:29:35,518 [Worker-255: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-23 09:29:35,520 [Worker-255: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:29:35,528 [Worker-255: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:29:53,808 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:29:53,964 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:29:53,970 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:32:02,731 [Worker-261: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:32:02,805 [Worker-261: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:32:02,813 [Worker-261: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:33:02,775 [Worker-262: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:33:02,927 [Worker-262: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:33:02,946 [Worker-262: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:33:22,407 [Worker-256: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:33:22,487 [Worker-256: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:33:22,491 [Worker-256: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:34:50,855 [Worker-264: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:34:51,044 [Worker-264: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:34:51,051 [Worker-264: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:35:27,887 [Worker-261: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:35:27,913 [Worker-261: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:35:27,925 [Worker-261: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:40:26,047 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:40:26,151 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:40:26,180 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:40:30,367 [Worker-271: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:40:30,437 [Worker-271: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:40:30,445 [Worker-271: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:43:33,296 [Worker-272: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:43:33,358 [Worker-272: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:43:33,360 [Worker-272: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:44:36,895 [Worker-275: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:44:36,943 [Worker-275: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:44:36,947 [Worker-275: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:44:53,524 [Worker-275: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:44:53,609 [Worker-275: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:44:53,613 [Worker-275: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:44:59,663 [Worker-262: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:44:59,702 [Worker-262: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-23 09:44:59,704 [Worker-262: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:45:48,038 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:45:48,208 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:45:48,216 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:48:33,472 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:48:33,556 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources
+2022-12-23 09:48:33,577 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 09:49:05,088 [Worker-271: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2022-12-23 09:49:05,090 [Worker-271: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2022-12-23 09:49:05,096 [Worker-271: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/boardTestJoin1Security/src/test/resources
+2022-12-23 10:14:08,904 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:14:08,907 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:14:08,907 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:14:09,051 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:14:09,058 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:14:09,058 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:14:09,058 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:14:17,353 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:14:17,353 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:14:17,355 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:14:17,376 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:14:17,380 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:14:17,380 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:14:17,380 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:14:49,947 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:14:49,972 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:14:49,974 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:14:50,039 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:14:50,049 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:14:50,049 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:14:50,049 [Worker-285: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:14:58,581 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:14:58,581 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:14:58,582 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:14:58,698 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:14:58,701 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:14:58,701 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:14:58,701 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:15:06,837 [Worker-287: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:15:06,837 [Worker-287: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:15:06,838 [Worker-287: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:15:06,842 [Worker-287: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:15:06,843 [Worker-287: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:15:06,843 [Worker-287: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:15:06,843 [Worker-287: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:15:25,835 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:15:25,835 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:15:25,836 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:15:25,838 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:15:25,840 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:15:25,840 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:15:25,840 [Worker-281: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:16:44,256 [Worker-288: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:16:44,258 [Worker-288: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:16:44,258 [Worker-288: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:16:44,790 [Worker-288: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:16:44,793 [Worker-288: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:16:44,794 [Worker-288: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:16:44,794 [Worker-288: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:18:38,174 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:18:38,175 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:18:38,176 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:18:38,659 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:18:38,676 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:18:38,676 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:18:38,676 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:22:14,269 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:22:14,270 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:22:14,271 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-12-23 10:22:14,273 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:22:14,297 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:22:14,298 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:22:14,298 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:22:18,919 [Worker-300: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:22:18,919 [Worker-300: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:22:18,920 [Worker-300: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-12-23 10:22:18,920 [Worker-300: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:22:18,924 [Worker-300: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:22:18,924 [Worker-300: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:22:18,924 [Worker-300: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:22:37,532 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:22:37,532 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:22:37,533 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-12-23 10:22:37,533 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:22:37,549 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:22:37,549 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:22:37,549 [Worker-293: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:22:53,067 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:22:53,067 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:22:53,067 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:22:53,184 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:22:53,186 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:22:53,186 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:22:53,186 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:23:38,196 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:23:38,199 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:23:38,201 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:23:38,279 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:23:38,282 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:23:38,282 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:23:38,282 [Worker-286: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources
+2022-12-23 10:25:43,763 [Worker-301: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:25:43,764 [Worker-301: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:25:43,764 [Worker-301: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-12-23 10:25:43,764 [Worker-301: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-12-23 10:25:43,768 [Worker-301: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-12-23 10:25:43,768 [Worker-301: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-12-23 10:25:43,768 [Worker-301: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/mini0/SsangYong/SpringTest/sistStudy/jsoupTest/src/test/resources

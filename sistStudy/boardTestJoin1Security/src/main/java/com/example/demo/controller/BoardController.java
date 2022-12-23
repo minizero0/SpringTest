@@ -48,6 +48,20 @@ public class BoardController {
 	
 	@GetMapping("/board/list/{pageNUM}/{id}")
 	public ModelAndView list(Model model, @PathVariable int pageNUM, @PathVariable String id, HttpSession session) {
+		//인증된(로그인한) 회원의 정보를 가져오기 위하여
+		//시큐리티의 인증객체가 필요.
+		Authentication authentication = 
+				SecurityContextHolder.getContext().getAuthentication();
+		
+		//이 인증객체를 통해서 인증된(로그인된) User객체를 받아 온다.
+		User user = (User)authentication.getPrincipal();
+		
+		//이 인증된 User를 통해서 로그인된 회원의 아이디를 가져온다.
+		String id2 = user.getUsername();
+		//아이디 정보를 세션에 상태유지 한다.
+		//만약, id뿐 아니라 로그인한 회원의 다른정보도 필요하다면 dao를 통해 회원 정보를 가져와서 상태유지
+		
+		session.setAttribute("id2", memberDAO.findById(id2).get());
 		List<Board> list = null;
 		//model.addAttribute("list", bs.findAll());
 		ModelAndView mav = new ModelAndView("/board/list");
@@ -63,27 +77,13 @@ public class BoardController {
 		totalPage = (int)Math.ceil((double)totalRecord / pageSIZE);
 		int start = (pageNUM-1)*pageSIZE+1;
 		int end = start + pageSIZE-1;
-		if(id!=null && !id.equals("all")) {
+		if(!id.equals("all")) {
 			model.addAttribute("list", bs.selectAllById(start, end, id));
 		}else {
 			model.addAttribute("list", bs.selectAll(start, end));
 		}
 		model.addAttribute("totalPage", totalPage);
 		model.addAttribute("id", id);
-		//인증된(로그인한) 회원의 정보를 가져오기 위하여
-		//시큐리티의 인증객체가 필요.
-		Authentication authentication = 
-				SecurityContextHolder.getContext().getAuthentication();
-		
-		//이 인증객체를 통해서 인증된(로그인된) User객체를 받아 온다.
-		User user = (User)authentication.getPrincipal();
-		
-		//이 인증된 User를 통해서 로그인된 회원의 아이디를 가져온다.
-		String id2 = user.getUsername();
-		//아이디 정보를 세션에 상태유지 한다.
-		//만약, id뿐 아니라 로그인한 회원의 다른정보도 필요하다면 dao를 통해 회원 정보를 가져와서 상태유지
-		
-		session.setAttribute("id2", memberDAO.findById(id2).get());
 		
 		return mav;
 	}
@@ -93,10 +93,10 @@ public class BoardController {
 		ModelAndView mav = new ModelAndView("/board/insert");
 		String id = (String)session.getAttribute("id2");
 		System.out.println("id:"+id);
-		if(id == null) {
-			mav.setViewName("error");
-			mav.addObject("msg","로그인하세요");
-		}
+//		if(id == null) {
+//			mav.setViewName("error");
+//			mav.addObject("msg","로그인하세요");
+//		}
 		System.out.println(no);
 		if(no>0) {
 			model.addAttribute("no", no);

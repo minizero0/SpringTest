@@ -12,8 +12,8 @@
 		<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
 		<input type="hidden" name = "no" th:value="${no}">
 		글번호 : <p th:text="${no}"></p>
-		작성자 : <span th:text="${session.id2}"></span> <input type="hidden" name = "writer" th:value ="${session.id2}"><br>
-		아이디 : <span th:text="${session.id2}"></span> <input type="hidden" name = "Member.id" th:value ="${session.id2}"><br>
+		작성자 : <span th:text="${session.id2.id}"></span> <input type="hidden" name = "writer" th:value ="${session.id2}"><br>
+		아이디 : <span th:text="${session.id2.id}"></span> <input type="hidden" name = "Member.id" th:value ="${session.id2}"><br>
 		글제목 :	<input type="text" name = "title"><br>
 		비밀번호 : <input type="number" name = "pwd"><br>
 		첨부파일 : <input type = "file" name = "uploadFile"><br>

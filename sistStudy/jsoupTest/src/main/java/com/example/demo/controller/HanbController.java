@@ -15,12 +15,32 @@ import com.example.demo.vo.NewBook;
 @RestController
 public class HanbController {
 	
+	@GetMapping("/seat")
+	public String seat() {
+		String url = "http://mpllc-seat.sen.go.kr/seatinfo/Seat_Info/1_count.asp";
+		String str = "";
+		ArrayList<NewBook> bookList = new ArrayList<>();
+		try {
+			Document doc = Jsoup.connect(url).get();
+			//#Layer110 > table > tbody > tr > td
+			Elements e = doc.select("#Layer110 > table > tbody > tr > td.wating_f");
+			//System.out.println(e.get(0).text());
+			
+			str = e.get(0).text();
+			Elements list = doc.getElementsByClass("wating_f");
+		}catch (Exception e) {
+			System.out.println("예외:"+e.getMessage());
+		}
+		return str;
+	}
+	
 	@GetMapping("/newbook")
 	public ArrayList<NewBook> newBook() {
 		String url = "https://www.hanbit.co.kr/store/books/new_book_list.html";
 		ArrayList<NewBook> bookList = new ArrayList<>();
 		try {
 			Document doc = Jsoup.connect(url).get();
+			
 			Elements list = doc.getElementsByClass("book_tit");
 			for(Element e : list) {
 				Element a = e.getElementsByTag("a").get(0);

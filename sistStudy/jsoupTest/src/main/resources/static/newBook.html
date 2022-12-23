@@ -17,10 +17,18 @@
 				})
 			}
 		})
+		$.ajax({
+			url:"/seat",
+			success:function(data){
+				$("#seat").html(data);
+			}
+		})
 	})
 </script>
 </head>
 <body>
+	빈자리 수 : <span id = "seat"></span>
+	<hr>
 	<h2>새로운 도서 정보</h2>
 	<ul id="list"></ul>
 </body>
