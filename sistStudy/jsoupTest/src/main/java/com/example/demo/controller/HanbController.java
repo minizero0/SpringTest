@@ -19,7 +19,6 @@ public class HanbController {
 	public String seat() {
 		String url = "http://mpllc-seat.sen.go.kr/seatinfo/Seat_Info/1_count.asp";
 		String str = "";
-		ArrayList<NewBook> bookList = new ArrayList<>();
 		try {
 			Document doc = Jsoup.connect(url).get();
 			//#Layer110 > table > tbody > tr > td
@@ -42,6 +41,7 @@ public class HanbController {
 			Document doc = Jsoup.connect(url).get();
 			
 			Elements list = doc.getElementsByClass("book_tit");
+			System.out.println(list);
 			for(Element e : list) {
 				Element a = e.getElementsByTag("a").get(0);
 				System.out.println(a);

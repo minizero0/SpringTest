@@ -6,6 +6,16 @@
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	$(function(){
+		
+		setInterval(function(){
+			$.ajax({
+				url:"/seat",
+				success:function(data){
+					$("#seat").html(data);
+				}
+			})
+		},3000)
+		
 		$.ajax({
 			url:"/newbook",
 			success:function(arr){
@@ -17,12 +27,7 @@
 				})
 			}
 		})
-		$.ajax({
-			url:"/seat",
-			success:function(data){
-				$("#seat").html(data);
-			}
-		})
+		
 	})
 </script>
 </head>
