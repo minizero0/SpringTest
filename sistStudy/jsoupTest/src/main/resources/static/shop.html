@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".btnSearch").click(function(){
+			var sort = $(this).attr("sort");
+			var search = $("#search").val();
+			var data = {search:search, sort:sort};
+			$.ajax({
+				url:"/shop",
+				data:data,
+				success:function(result){
+					$("#price").html(result.price)
+					$("#item").html(result.title)
+					$("#link").html(result.link).attr("href", result.link)
+				}
+			})
+		})
+		
+		
+	//asc, dsc	
+	})
+</script>
+</head>
+<body>
+	<h2>쇼핑 검색</h2>
+	<ul id="list"></ul>
+	
+	상품명 : <input type ="search" id = "search">
+	<button class = "btnSearch" sort = "asc">최저가 검색</button>
+	<button class = "btnSearch" sort = "dsc">최고가 검색</button>
+	<br>
+	가격 : <span id = "price"></span><br>
+	상품명 : <span id = "item"></span><br> 
+	이동하기 : <a id = "link">클릭</a>
+</body>
+</html>
