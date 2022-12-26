@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+  <!-- jQuery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+  <!-- iamport.payment.js -->
+	<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		var IMP = window.IMP; // 생략 가능
+		IMP.init("imp46351504"); // 예: imp00000000
+		
+	$("#btnOk").click(function(){
+		      // IMP.request_pay(param, callback) 결제창 호출
+		      IMP.request_pay({ // param
+		          pg: "kcp",
+		          pay_method: "card",
+		          merchant_uid: "ORD"+new Date().getTime(),
+		          name: "축구공",
+		          amount: 100,
+		          buyer_email: "ehwjrdufvnd@naver.com",
+		          buyer_name: "홍길동",
+		          buyer_tel: "010-4242-4242",
+		          buyer_addr: "서울특별시 강남구 신사동",
+		          buyer_postcode: "01181"
+		      }, function (rsp) { // callback
+		          if (rsp.success) {
+		              // 결제 성공 시 로직,
+		              alert("결제완료")
+		              console.log("결제완료")
+		              console.log("고유ID:"+rsp.imp_uid)
+		              console.log("상점거래 ID:"+rsp.merchant_uid)
+		              console.log("결재금액:"+rsp.paid_amount)
+		              console.log("카드승인번호:"+rsp.apply_num)
+		              $("#imp_uid").val(rsp.imp_uid);
+		              $("#merchant_uid").val(rsp.merchant_uid);
+		              $("#paid_amount").val(rsp.paid_amount);
+		              $("#apply_num").val(rsp.apply_num);
+		              
+		              $("#pay").submit
+		          } else {
+		 				alert("결제실패")
+		 				console.log("결제실패")
+		          }
+		      });
+		})
+	})
+    
+  </script>
+</head>
+<body>
+	<button id="btnOk">결제하기</button>
+	<hr>
+	<form action="/payok" method="post" id = "pay">
+		<input type = "text" name="imp_uid" id = "imp_uid">
+		<input type = "text" name="merchant_uid" id = "merchant_uid">
+		<input type = "text" name="paid_amount" id = "paid_amount">
+		<input type = "text" name="apply_num" id = "apply_num">
+	</form>
+	
+	
+</body>
+</html>
