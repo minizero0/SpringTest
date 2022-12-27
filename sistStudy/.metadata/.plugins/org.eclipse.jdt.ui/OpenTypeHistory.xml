@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=jpatest/\/Users\/mini0\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.7.6\/spring-data-jpa-2.7.6.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/spring-data-jpa-2.7.6.jar=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/2.7.6=/=/maven.scope=/compile=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1670977907000"/>
-    <typeInfo handle="=bookJpaTest/\/Library\/Java\/JavaVirtualMachines\/jdk-17.0.4.1.jdk\/Contents\/Home\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/=/maven.pomderived=/true=/&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1660672169000"/>
+    <typeInfo handle="=junittest/src&lt;junittest{Calc.java[Calc" modifiers="1" timestamp="1672041017000"/>
+    <typeInfo handle="=bootJunitTest/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.controller{TestController.java[TestController" modifiers="1" timestamp="1672042982000"/>
 </typeInfoHistroy>

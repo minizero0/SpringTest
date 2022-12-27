@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$.ajax({
+			url:"http://127.0.0.1:52273/listDept",
+			jsonCallback:"dept",
+			dataType:"jsonp",
+			success:function(rows){
+			$("#list").empty();				
+             $.each(rows, function(){
+                 
+                 let tr = $("<tr></tr>").addClass("dept");
+                 let td1 = $("<td></td>").html(this.DNO);
+                 let td2 = $("<td></td>").html(this.DNAME);
+                 let td3 = $("<td></td>").html(this.DLOC);
+                 $(tr).append(td1,td2,td3);
+                 $("#list").append(tr);
+             	});
+       		}});
+	})
+</script>
+</head>
+<body>
+	 <h2>부서관리</h2>
+    <hr>
+    <form id="f">
+        부서번호 : <input type="text" name="dno" id="dno"><br>
+        부서이름 : <input type="text" name="dname" id="dname"><br>
+        부서위치 : <input type="text" name="dloc" id="dloc"><br>
+    </form>
+    <button id="btnAdd">등록</button>
+    <button id="btnUpdate">수정</button>
+    <button id="btnDelete">삭제</button>
+    <table border="1" width="60%">
+        <thead>
+            <tr>
+                <th>부서번호</th>
+                <th>부서이름</th>
+                <th>부서위치</th>               
+            </tr>
+        </thead>
+        <tbody id="list"></tbody>
+    </table>
+</body>
+</html>
