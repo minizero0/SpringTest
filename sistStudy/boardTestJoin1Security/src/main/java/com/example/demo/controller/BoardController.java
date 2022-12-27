@@ -22,9 +22,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.BoardDAO;
 import com.example.demo.dao.MemberDAO;
+import com.example.demo.db.DBManager;
 import com.example.demo.entity.Board;
 import com.example.demo.entity.Member;
 import com.example.demo.service.BoardService;
+import com.example.demo.vo.BoardVO;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -241,6 +243,12 @@ public class BoardController {
 			mav.addObject("msg", "수정오류 발생");
 		}
 		return mav;
+	}
+	
+	
+	@GetMapping("/board/findAll")
+	public void findAll(Model model){
+		model.addAttribute("list", DBManager.findAll());
 	}
 	
 }
